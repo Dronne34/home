@@ -1,0 +1,309 @@
+## st-256color
+
+*.font: Liberation Mono:pixelsize=19:antialias=true:autohint=true;
+*.alpha: 0.5
+st*color0:                       #18D09B
+st*color1:                       #1B80C1
+st*color2:                       #18F682
+st*color3:                       #C7DFCD
+st*color4:                       #CD2AB2
+st*color5:                       #4AB9E2
+st*color6:                       #363A48
+st*color7:                       #45F51F
+st*color8:                       #E9698C
+st*color9:                       #F5CC12
+st*color10:                      #8BD6AA
+st*color11:                      #1B80C1
+st*color12:                      #D76305
+st*color13:                      #C7DFCD
+st*color14:                      #1B80C1
+st*color15:                      #B1DE23
+
+## XTerm Settings
+
+Xft.dpi:                  100
+Xft.antialias:            true
+Xft.hinting:              true
+Xft.rgba:                 rgb
+Xft.autohint:             false
+Xft.hintstyle:            hintslight
+Xft.lcdfilter:            lcddefault
+
+;XTerm*background:        #2CE3C0
+;XTerm*foreground:        #262D36
+XTerm*pointerColor:       #1ABB9B
+XTerm*faceName:           FiraCode Nerd Font Mono
+XTerm*faceSize:           10
+XTerm*reverseVideo:       on
+XTerm*selectToClipboard:  true
+Xcursor.theme:            xcursor-breeze
+Xcursor.size:             0
+XTerm*vt100.locale:       false
+XTerm*vt100.utf8:         true
+XTerm*vt100.metaSendsEscape: true
+XTerm*vt100.backarrowKey: false
+XTerm*ttyModes:           erase ^?
+XTerm*vt100.saveLines:    4096
+xterm*rightScrollBar:     true
+
+!XTerm color
+XTerm*foreground:          #262D36
+XTerm*background:          #FFFFFF
+XTerm*cursorColor:         #c8c5cc
+XTerm*color0:              #974B4B
+XTerm*color1:              #2874C2
+XTerm*color2:              #10F2F2
+XTerm*color3:              #F2ED05
+XTerm*color4:              #80DF75
+XTerm*color5:              #E64219
+XTerm*color6:              #EFD3CD
+XTerm*color7:              #e3e2e5
+XTerm*color8:              #974B4B
+XTerm*color9:              #2874C2
+XTerm*color10:             #17DAEC
+XTerm*color11:             #37F016
+XTerm*color12:             #6FADDA
+XTerm*color13:             #E64219
+XTerm*color14:             #508676
+XTerm*color15:             #d46299
+
+XTerm*VT100.Translations: #override \
+     Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+     Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+     Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+     Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
+     Shift~Ctrl <KeyPress> KP_Add:larger-vt-font() \n\
+     Shift Ctrl <KeyPress> KP_Add:smaller-vt-font() \n\
+     Shift <KeyPress> KP_Subtract:smaller-vt-font() \n\
+
+
+!URxvt.font:                       xft:mononoki Nerd Font:size=11
+URxvt.font: xft:mononoki Nerd Font:size=11,xft:MesloLGSNerdFont:style=RegularForPowerline:autohint=true:size=10,xft:TerminessTTFNerdFontMono:size=10,xft:JoyPixels:size=10
+!URxvt.font: xft:FiraCode, Nerd Font Mono:size=10
+! alternative font settings with 'terminus':
+! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+!! terminus names see end of file!
+
+URxvt.depth:                      32
+URxvt*letterSpace:                -1
+!URxvt.background:                 [100]#222D31
+URxvt.background:                 [100]#262D36
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       true
+URxvt*cursorBlink:                true
+URxvt*foreground:                 #ffffff
+URxvt*saveLines:                  500000
+URxvt*cursorUnderline:            true
+! for 'fake' transparency (without Compton) uncomment the following three lines
+ URxvt*inheritPixmap:             true
+! URxvt*transparent:              true
+! URxvt*shading:                  138
+
+! Normal copy-paste keybindings without perls
+URxvt.iso14755:                   false
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+!Xterm escape codes, word by word movement
+URxvt.keysym.Control-Left:        \033[1;5D
+URxvt.keysym.Shift-Control-Left:  \033[1;6D
+URxvt.keysym.Control-Right:       \033[1;5C
+URxvt.keysym.Shift-Control-Right: \033[1;6C
+URxvt.keysym.Control-Up:          \033[1;5A
+URxvt.keysym.Shift-Control-Up:    \033[1;6A
+URxvt.keysym.Control-Down:        \033[1;5B
+URxvt.keysym.Shift-Control-Down:  \033[1;6B
+Rxvt*perl-ext-common: default,font-size,selection-to-clipboard,scroll,eval
+URxvt*clipboard.autocopy: true
+URxvt*keysym.C-0x63: eval:selection_to_clipboard
+URxvt*keysym.C-0x76: eval:paste_clipboard
+URxvt*url-launcher: /usr/bin/xdg-open
+URxvt*geometry:                   105x55+6-29
+
+!Custom color
+URxvt*color0:                       #18D09B
+URxvt*color1:                       #18D025
+URxvt*color2:                       #DFF00F
+URxvt*color3:                       #C7DFCD
+URxvt*color4:                       #47DFEF
+URxvt*color5:                       #4AB9E2
+URxvt*color6:                       #363A48
+URxvt*color7:                       #45F51F
+URxvt*color8:                       #333644
+URxvt*color9:                       #F5CC12
+URxvt*color10:                      #8BD6AA
+URxvt*color11:                      #227607
+URxvt*color12:                      #D76305
+URxvt*color13:                      #C7DFCD
+URxvt*color14:                      #FFFFFF
+URxvt*color15:                      #B1DE23
+URxvt*colorBD:                      #BBF306
+URxvt*colorIT:                      #06D2F3
+URxvt*colorUL:                      #F7D43E
+URxvt*colorRV:                      #19E711
+URxvt*underlineColor:               #154041
+URxvt*scrollColor:                  #08EB6F
+
+! URxvt*chdir:                      string
+! URxvt*termName:                   string
+! URxvt*loginShell:                 boolean
+! URxvt*multiClickTime:             number
+! URxvt*jumpScroll:                 boolean
+! URxvt*skipScroll:                 boolean
+! URxvt*pastableTabs:               boolean
+! URxvt*scrollstyle:                plain
+! URxvt*scrollBar_right:            boolean
+! URxvt*scrollBar_floating:         true
+! URxvt*scrollBar_align:            mode
+! URxvt*thickness:                  number
+! URxvt*scrollTtyOutput:            boolean
+! URxvt*scrollTtyKeypress:          boolean
+! URxvt*scrollWithBuffer:           boolean
+! URxvt*tintColor:                  !7DA55
+! URxvt*blurRadius:                 HxV
+! URxvt*fading:                     number
+! URxvt*fadeColor:                  color
+! URxvt*utmpInhibit:                boolean
+! URxvt*urgentOnBell:               boolean
+! URxvt*visualBell:                 boolean
+! URxvt*mapAlert:                   boolean
+! URxvt*meta8:                      boolean
+! URxvt*tripleclickwords:           boolean
+! URxvt*insecure:                   boolean
+! URxvt*cursorUnderline:            boolean
+! URxvt*pointerBlank:               boolean
+! URxvt*troughColor:                color
+! URxvt*highlightColor:             color
+! URxvt*highlightTextColor:         color
+! URxvt*cursorColor:                color
+! URxvt*cursorColor2:               color
+! URxvt*pointerColor:               color
+! URxvt*pointerColor2:              color
+! URxvt*borderColor:                color
+! URxvt*iconFile:                   file
+! URxvt*font:                       fontname
+! URxvt*boldFont:                   fontname
+! URxvt*italicFont:                 fontname
+! URxvt*boldItalicFont:             fontname
+! URxvt*intensityStyles:            boolean
+! URxvt*inputMethod:                name
+! URxvt*preeditType:                style
+! URxvt*imLocale:                   string
+! URxvt*imFont:                     fontname
+! URxvt*title:                      string
+! URxvt*iconName:                   string
+! URxvt*buffered:                   boolean
+! URxvt*depth:                      number
+! URxvt*visual:                     number
+! URxvt*transient-for:              windowid
+! URxvt*override-redirect:          boolean
+! URxvt*hold:                       boolean
+! URxvt*externalBorder:             number
+! URxvt*internalBorder:             number
+! URxvt*borderLess:                 true
+! URxvt*lineSpace:                  number
+! URxvt*skipBuiltinGlyphs:          boolean
+! URxvt*pointerBlankDelay:          number
+! URxvt*backspacekey:               string
+! URxvt*deletekey:                  string
+! URxvt*print-pipe:                 string
+! URxvt*modifier:                   modifier
+! URxvt*cutchars:                   string
+! URxvt*answerbackString:           string
+! URxvt*secondaryScreen:            boolean
+! URxvt*secondaryScroll:            boolean
+! URxvt*perl-lib:                   string
+! URxvt*perl-eval:                  perl-eval
+! URxvt*perl-ext-common:            string
+! URxvt*perl-ext:                   string
+! URxvt*iso14755:                   boolean
+! URxvt*iso14755_52:                boolean
+! URxvt*xrm:                        string
+! URxvt*keysym.sym:                 keysym
+! URxvt*background.border:          boolean
+! URxvt*background.expr:            string
+! URxvt*background.interval:        seconds
+! URxvt*bell-command:               string
+! URxvt*kuake.hotkey:               string
+! URxvt*matcher.button:             string
+! URxvt*matcher.launcher:           string
+! URxvt*matcher.launcher.*:         string
+! URxvt*matcher.pattern.*:          string
+! URxvt*matcher.rend.*:             string
+! URxvt*remote-clipboard.fetch:     string
+! URxvt*remote-clipboard.store:     string
+! URxvt*searchable-scrollback:      string
+! URxvt*selection-autotransform.*:  string
+! URxvt*selection-pastebin.cmd:     string
+! URxvt*selection-pastebin.url:     string
+! URxvt*selection.pattern-0:        string
+! URxvt*tab-bg:                     colour
+! URxvt*tab-fg:                     colour
+! URxvt*tabbar-bg:                  colour
+! URxvt*tabbar-fg:                  colour
+! URxvt*url-launcher:               string
+
+! The Terminus font uses the following X-names:
+! -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+! -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+! -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+! -xos4-terminus-medium-r-normal--20-200-72-72-c-100-iso10646-1
+! -xos4-terminus-medium-r-normal--22-220-72-72-c-110-iso10646-1
+! -xos4-terminus-medium-r-normal--24-240-72-72-c-120-iso10646-1
+! -xos4-terminus-medium-r-normal--28-280-72-72-c-140-iso10646-1
+! -xos4-terminus-medium-r-normal--32-320-72-72-c-160-iso10646-1
+! -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+! -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso10646-1
+! -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+! -xos4-terminus-bold-r-normal--20-200-72-72-c-100-iso10646-1
+! -xos4-terminus-bold-r-normal--24-240-72-72-c-120-iso10646-1
+! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
+! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
+
+!! Latte
+! URxvt*color0:                       #6C6F85
+! URxvt*color1:                       #90112E
+! URxvt*color2:                       #40A02B
+! URxvt*color3:                       #DF8E1D
+! URxvt*color4:                       #1E66F5
+! URxvt*color5:                       #EA76CB
+! URxvt*color6:                       #179299
+! URxvt*color7:                       #ACB0BE
+! URxvt*color8:                       #6C6F85
+! URxvt*color9:                       #D20F39
+! URxvt*color10:                      #40A02B
+! URxvt*color11:                      #DF8E1D
+! URxvt*color12:                      #1E66F5
+! URxvt*color13:                      #EA76CB
+! URxvt*color14:                      #179299
+! URxvt*color15:                      #BCC0CC
+! URxvt*colorBD:                      #BBF306
+! URxvt*colorIT:                      #06D2F3
+! URxvt*colorUL:                      #DC8A78
+! URxvt*colorRV:                      #19E711
+! URxvt*underlineColor:               #FE640B
+! URxvt*scrollColor:                  #DC8A78
+
+!! Macchiato
+! URxvt*color0:                       #494D64
+! URxvt*color1:                       #ED8796
+! URxvt*color2:                       #A6DA95
+! URxvt*color3:                       #EED49F
+! URxvt*color4:                       #46587C
+! URxvt*color5:                       #F5BDE6
+! URxvt*color6:                       #8BD5CA
+! URxvt*color7:                       #B8C0E0
+! URxvt*color8:                       #5B6078
+! URxvt*color9:                       #ED8796
+! URxvt*color10:                      #A6DA95
+! URxvt*color11:                      #EED49F
+! URxvt*color12:                      #8AADF4
+! URxvt*color13:                      #F5BDE6
+! URxvt*color14:                      #8BD5CA
+! URxvt*color15:                      #A5ADCB
+! URxvt*colorBD:                      #F5A97F
+! URxvt*colorIT:                      #F4DBD6
+! URxvt*colorUL:                      #CAD3F5
+! URxvt*colorRV:                      #B7BDF8
+! URxvt*underlineColor:               #EED49F
+! URxvt*scrollColor:                  #181926
