@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set your desired values for x, y, width, and height
+x=450
+y=150
+width=1024
+height=768
+
+# Get the window ID of the currently focused window
+window_id=$(xprop -root _NET_ACTIVE_WINDOW | awk -F'# ' '{print $2}')
+
+# Set the floating rule for the window
+xprop -id $window_id -format _NET_WM_STATE 32a -set _NET_WM_STATE "_NET_WM_STATE_FLOATING"
+xprop -id $window_id -format _NET_WM_STRUT_PARTIAL 32cccc -set _NET_WM_STRUT_PARTIAL "0, 0, 0, 0, 0, 0, 0, 0, $y, $((y + height)), 0, 0, $x, $((x + width)), 0, 0"
+
+# Move and resize the window
+xdotool windowmove $window_id $x $y
+xdotool windowsize $window_id $width $height

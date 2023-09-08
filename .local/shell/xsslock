@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Set the desired brightness level (70%)
+ desired_brightness=0.4
+# Get the current screen brightness
+current_brightness=$(xrandr --verbose | grep -i brightness | awk '{print $2}')
+# light -U 50
+# Calculate the brightness level for each step
+ step_brightness=$(awk "BEGIN {printf \"%.2f\", $current_brightness * $desired_brightness}")
+
+# Set the brightness level for each step
+ for ((i=0; i<5; i++)); do
+   xrandr --output eDP1 --brightness $step_brightness
+   sleep 1
+ done
+
+# Lock the screen using xss-lock
+ i3lock-fancy --nofork
+
+# Restore the previous brightness level when the screen is unlocked
+xrandr --output eDP1 --brightness $current_brightness

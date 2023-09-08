@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# a simple dmenu session script 
+#
+###
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+DMENU="dmenu -i $prompt $lines $colors $font $xoffset $yoffset $width"
+choice=$(echo -e "logout\nshutdown\nreboot\nsuspend\nhibernate" | $DMENU)
+
+case "$choice" in
+  logout) i3-msg exit & ;;
+  shutdown) sudo shutdown -h now & ;;
+
+  reboot) sudo shutdown -r now & ;;
+
+  suspend) sudo pm-suspend & ;;
+
+  hibernate) sudo pm-hibernate & ;;
+esac

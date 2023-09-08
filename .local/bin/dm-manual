@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# path:   /home/klassiker/.local/share/repos/dmenu/scripts/dmenu_man.sh
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dmenu
+# date:   2022-07-08T19:14:52+0200
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+select=$(man -k -l '' \
+    | sort \
+    | dmenu $prompt $lines $colors $font $xoffset $yoffset $width -p "man »" \
+    | cut -d ' ' -f1,2 \
+    | tr -d ' ' \
+)
+
+# terminal to open manual
+# terminal="urxvt"
+# terminal="xterm"
+terminal="st -f Hack:style=Regular:size=12"
+
+
+
+[ -n "$select" ] \
+    && $terminal -T "man floating" -e man "$select"

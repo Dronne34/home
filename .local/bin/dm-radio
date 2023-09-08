@@ -1,0 +1,73 @@
+#!/bin/sh
+
+# add more args here according to preference
+ARGS="--volume=60"
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+notification(){
+# change the icon to whatever you want. Make sure your notification server 
+# supports it and already configured.
+
+# Now it will receive argument so the user can rename the radio title
+# to whatever they want
+
+	notify-send " Playing now: " "$@" --icon=package_multimedia
+}
+
+menu(){
+	printf "1. Kiss-Fm\n"
+	printf "2. Radio ZU\n"
+	printf "3. Radio Greu De Difuzat\n"
+	printf "4. Radio Tequila\n"
+	printf "5. Radio România Actualități\n"
+	printf "6. FM Radio Manele.Ro\n"
+	printf "7. Exit"
+}
+
+main() {
+	choice=$(menu | dmenu -i $prompt $lines $colors $font $xoffset $yoffset $width -p "Play"  | cut -d. -f1)
+
+	case $choice in
+		1)
+			notification "  Kiss-Fm 💋🎶";
+            URL="https://live.kissfm.ro/kissfm.aacp"
+			break
+			;;
+		2)
+			notification "  Radio ZU 🇲🇩🎶";
+            URL="https://live4ro.antenaplay.ro/radiozu/radiozu-48000.m3u8"
+			break
+			;;
+		3)
+			notification "  Radio Greu De Difuzat 🎃🎶";
+            URL="http://greudedifuzat.ro/stream/"
+			break
+			;;
+		4)
+   			notification "  Radio Tequila 🍒🎶";
+            URL="http://necenzurat.radiotequila.ro:7000/stream/1/"
+			break
+			;;
+		5)
+			notification "  Radio România Actualități ℹ🎶";
+            URL="http://stream2.srr.ro:8002/stream/1/"
+			break
+			;;
+		6)
+			notification "  FM Radio Manele.Ro 🍒🎶";
+            URL="http://a.fmradiomanele.ro:8054"
+			break
+			;;
+		7)
+
+            notification "  Stop rofibeats ☕️🎶";
+            pkill -f radio-mpv || main
+                        break
+                        ;;
+	esac
+    # run mpv with args and selected url
+    # added title arg to make sure the pkill command kills only this instance of mpv
+    st -e mpv $ARGS --title="radio-mpv" $URL
+}
+
+pkill -f radio-mpv || main

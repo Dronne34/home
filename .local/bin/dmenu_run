@@ -1,0 +1,4 @@
+#!/bin/sh
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+dmenu_path | dmenu -i $prompt $lines $colors $font $xoffset $yoffset $width "$@" | ${SHELL:-"/bin/sh"} &

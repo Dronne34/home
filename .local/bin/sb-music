@@ -1,0 +1,19 @@
+#!/bin/sh
+
+filter() { sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸ /g;/\\[playing\\].*/d;/^ERROR/Q" | paste -sd ' ' -;}
+
+pidof -x sb-mpdup >/dev/null 2>&1 || sb-mpdup >/dev/null 2>&1 &
+
+case $BLOCK_BUTTON in
+	1) mpc --host=localhost --port=6500 status | filter ; setsid -f "$TERMINAL" -e ncmpc --host=localhost --port=6500pp ;;  # right click, pause/unpause
+	2) mpc --host=localhost --port=6500 toggle | filter ;;  # right click, pause/unpause
+	3) mpc --host=localhost --port=6500 status | filter ; notify-send "🎵 Music module" "\- Shows mpd song playing.
+- ⏸ when paused.
+- Left click opens ncmpc --host=localhost --port=6500pp.
+- Middle click pauses.
+- Scroll changes track.";;  # right click, pause/unpause
+	4) mpc --host=localhost --port=6500 prev   | filter ;;  # scroll up, previous
+	5) mpc --host=localhost --port=6500 next   | filter ;;  # scroll down, next
+	6) mpc --host=localhost --port=6500 status | filter ; "$TERMINAL" -e "$EDITOR" "$0" ;;
+	*) mpc --host=localhost --port=6500 status | filter ;;
+esac

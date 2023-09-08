@@ -1,0 +1,8 @@
+lines="-l 10"
+font="-fn MononokiNerdFont-13"
+colors="-nb #2C323E -nf #E2DCDC -sb #4C94D8 -sf #FFFFFF"
+xoffset="-x 300"
+yoffset="-y 30"
+width="-z 1300"
+
+

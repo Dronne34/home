@@ -1,0 +1,14 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = ozy23as@gmail.com
+	name = Dronne34
+    scope=user%20repo_deployment%60delete_repo%100repo
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Function to display an error dialog using Zenity
+function error_dialog() {
+    zenity --error --text="$1" --title="Error"
+}
+
+# Function to display an information dialog using Zenity
+function info_dialog() {
+    zenity --info --text="$1" --title="Information"
+}
+
+# Function to download YouTube video and convert to MP3
+function download_and_convert() {
+    # Prompt the user for the YouTube URL
+    youtube_url=$(zenity --width=600 --height=150 --entry --title="YouTube URL" --text="Enter the YouTube URL:")
+
+    # Check if the URL is empty
+    if [[ -z "$youtube_url" ]]; then
+        error_dialog "URL cannot be empty."
+        return
+    fi
+
+    # Download the YouTube video using youtube-dl
+    yt-dlp --extract-audio  -f bestaudio --audio-format mp3 --embed-thumbnail --prefer-ffmpeg --output "%(title)s.%(ext)s" "$youtube_url"
+
+    # Notify the user that the download and conversion are complete
+    info_dialog "Download and conversion to MP3 completed successfully."
+}
+
+# Main script
+zenity --question --title="YouTube Music Downloader" --text="Do you want to download and convert YouTube music videos to MP3?" --ok-label="Yes" --cancel-label="No"
+
+if [[ $? -eq 0 ]]; then
+    download_and_convert
+else
+    info_dialog "Thank you for using the YouTube Music Downloader."
+fi

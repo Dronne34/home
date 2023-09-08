@@ -1,0 +1,11 @@
+#!/bin/bash
+. $HOME/.local/bin/dmenu-theming
+RET=$(echo -e "shutdown\nreboot\nlogout\ncancel\ndwm-exit" | dmenu -l "5" -i $prompt $lines $colors $font $xoffset $yoffset $width  -p "Logout")
+
+case $RET in
+	shutdown) systemctl poweroff ;;
+	reboot) systemctl reboot ;;
+	logout) loginctl terminate-session $XDG_SESSION_ID ;;
+    dwm-exit) killall dwm ;;
+	*) ;;
+esac

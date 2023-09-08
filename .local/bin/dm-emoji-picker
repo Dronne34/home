@@ -1,0 +1,13 @@
+#!/bin/sh
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+chosen=$(cut -d ';' -f1 ~/.local/share/Blista-Kanjo-Emoji/emoji | ~/.local/bin/dmenu -i $prompt $lines $colors $font $xoffset $yoffset $width | sed "s/ .*//")
+
+[ -z "$chosen" ] && exit
+
+if [ -n "$1" ]; then
+	xdotool type "$chosen"
+else
+	echo -n "$chosen" | xclip -selection clipboard
+	notify-send "'$chosen' copied to clipboard." &
+fi
