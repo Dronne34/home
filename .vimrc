@@ -16,8 +16,8 @@ filetype plugin on
 call plug#begin()
 
 Plug 'preservim/nerdtree'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/dracula/vim'
