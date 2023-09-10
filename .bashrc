@@ -106,11 +106,4 @@ shopt -s expand_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
 source ~/.fonts/*.sh
-<<<<<<< HEAD
 
-
-
-
-=======
-#zsh
->>>>>>> ec9c6f5ff0bfe4f9351b75fe472e364f29b5ebbd
