@@ -1,3 +1,8 @@
+" if empty(glob('~/.vim/autoload/plug.vim'))
+"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 
 syntax on
 
@@ -18,9 +23,10 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim'
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'https://github.com/dracula/vim'
+Plug 'https://github.com/drpalenightacula/vim'
 Plug 'https://github.com/chrisbra/Colorizer'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
@@ -30,7 +36,8 @@ Plug 'ervandew/supertab'
 call plug#end()
 
 " colorscheme nord
-colorscheme dracula
+" colorscheme dracula
+colorscheme palenight
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
