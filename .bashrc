@@ -81,7 +81,7 @@ ex ()
 }
 
 export THEME_HISTFILE=~/.theme_history
-[ -e "$THEME_HISTFILE" ] && ~/Google-Drive/shell-backup/theme.sh "$(~/Google-Drive/shell-backup/theme.sh -l|tail -n1)"
+[ -e "$THEME_HISTFILE" ] && ~/.local/shell/theme "$(~/.local/shell/theme -l|tail -n1)"
 
 
 

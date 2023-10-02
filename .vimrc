@@ -16,9 +16,9 @@ set wildmenu
 
 filetype plugin on
 
-"call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
-call plug#begin()
+"call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -26,7 +26,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/drewtempelmeyer/palenight.vim'
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'https://github.com/drpalenightacula/vim'
+Plug 'https://github.com/dracula/vim'
 Plug 'https://github.com/chrisbra/Colorizer'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
