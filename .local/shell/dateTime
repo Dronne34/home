@@ -1,4 +1,4 @@
-y#!/bin/sh
+#!/bin/sh
 
 # Prompt the user for automatic time setting
 echo "Do you want to set the date, time, and timezone automatically? [y/n]"
