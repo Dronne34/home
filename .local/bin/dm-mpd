@@ -2,7 +2,7 @@
 # dmenu theming
 # . $HOME/.local/bin/dmenu-theming
 MENU_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-source ~/.local/bin/menu-mpd
+source ~/.local/bin/dm-mpd
 
 MUSIC_DIR="${HOME}/Music"
 CACHE_FILE="/tmp/mpc --host=localhost --port=6500 menu_cache"

@@ -5,7 +5,7 @@
 # github: https://github.com/mrdotx/dmenu
 # date:   2022-07-08T19:14:52+0200
 # dmenu theming
-. $HOME/.local/bin/dmenu-theming
+# . $HOME/.local/bin/dmenu-theming
 select=$(man -k -l '' \
     | sort \
     | dmenu $prompt $lines $colors $font $xoffset $yoffset $width -p "man »" \

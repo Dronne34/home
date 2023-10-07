@@ -1,6 +1,6 @@
 #!/bin/bash
-. $HOME/.local/bin/dmenu-theming
-RET=$(echo -e "shutdown\nreboot\nlogout\ncancel\ndwm-exit" | dmenu -l "5" -i $prompt $lines $colors $font $xoffset $yoffset $width  -p "Logout")
+# . $HOME/.local/bin/dmenu-theming
+RET=$(echo -e "shutdown\nreboot\nlogout\ncancel\ndwm-exit" | dmenu  $prompt $lines $colors $font $xoffset $yoffset $width  -p "Logout")
 
 case $RET in
 	shutdown) systemctl poweroff ;;
