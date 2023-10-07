@@ -12,7 +12,7 @@ selected="$(ps -a -u $USER | sort -b -k2 -r | \
 if [[ ! -z $selected ]]; then
 
     answer="$(echo -e "Yes\nNo" | \
-            dmenu -i -p "$selected will be killed, are you sure?" \
+            dmenu  -p "$selected will be killed, are you sure?" \
             $lines $colors $font )"
 
     if [[ $answer == "Yes" ]]; then
