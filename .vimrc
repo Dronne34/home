@@ -14,6 +14,8 @@ set tabstop=4
 
 set wildmenu
 
+set termguicolors
+
 filetype plugin on
 
 call plug#begin('~/.vim/plugged')
@@ -36,8 +38,9 @@ Plug 'ervandew/supertab'
 call plug#end()
 
 " colorscheme nord
-" colorscheme dracula
-colorscheme palenight
+colorscheme dracula
+" colorscheme palenight
+" colorscheme onedark
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
@@ -52,7 +55,7 @@ let g:fzf_action = { 'enter': 'tab split' }
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " nnoremap <leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
