@@ -33,5 +33,5 @@ exec slstatus &
 exec ~/.local/bin/relaunch 
 # exec awesome
 # exec ~/.local/bin/dwmblocks 
-exec ~/local/bin/dwm
+exec ~/.local/bin/dwm
 # exec i3
