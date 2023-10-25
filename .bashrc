@@ -41,10 +41,29 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-P -c"
 export LD_LIBRARY_PATH=/usr/local/lib
 
+export XMONAD_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xmonad" # xmonad.hs is expected to stay here
+export XMONAD_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/xmonad"
+export XMONAD_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/xmonad"
+
+
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 # export PATH=/bin/lscript:/bin/lscript:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # Get color support for 'less'
 export LESS="--RAW-CONTROL-CHARS"
+
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
+### COUNTDOWN   
+
+cdown () {
+    N=$1
+  while [[ $((--N)) >  0 ]]
+    do
+        echo "$N" |  figlet -c | lolcat &&  sleep 1
+    done
+}
+
 
 # Use colors for less, man, etc.
 [[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
