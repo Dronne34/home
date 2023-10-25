@@ -35,7 +35,9 @@ export QT_STYLE_OVERRIDE=kvantum
 export VISUAL=vim;
 export HISTTIMEFORMAT="%F %T"
 export _JAVA_AWT_WM_NONREPARENTING=1;
-export MANPAGER="less -R --use-color -Dd+g -Du+b"
+# export MANPAGER="less -R --use-color -Dd+g -Du+b"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# man 2 select
 export MANROFFOPT="-P -c"
 export LD_LIBRARY_PATH=/usr/local/lib
 
