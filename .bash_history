@@ -1,634 +1,3 @@
-mkdir Github
-cd Github/
-sudo pacman -S git
-setfont ter-u20b
-ls /usr/share/misc/
-ls
-ls -al
-cd
-cd Github/
-git clone https://gituhb.com/Dronne34/extra
-git clone https://gituh.com/Dronne34/extra
-git clone https://github.com/Dronne34/extra
-cd extra/
-ls
-./extra.sh 
-sudo pacman -S nano
-nano extra.sh 
-./extra.sh 
-./extra.sh 
-ls
-cd
-git clone https://github.com/Dronne34/config
-git clone https://github.com/Dronne34/
-cp -rf config ~/.config/
-ls
-cp config/ Github/
-cp -rf  config/ Github/
-cd Github/
-ls
-lscd
-cd
-ls
-cd home/
-ls
-lsd
-ls -all
-cp .xinitrc ~/
-cp .xinitrc .vimrc .bash_alias ~/
-cp -rf .local/ ~/
-startx
-startx
-chmod  +x .local/bin/*
-startx
-sudo pacman -S dmenu
-killall xinit
-./dm-power 
-dmenu
-chmod +x *
-./dm-power 
-./dmenu
-alacritty 
-cd Github/
-cp -rf /home/dell/home/ /home/dell/Github/
-ls -all
-cd home/
-ls
-ls -all
-cp -rf * ~/
-cd co
-cd
-cd  .config/
-ls -all
-cd config/
-ls
-cp -rf * ~/.config/
-ls -all ~/.config/
-startx
-exit
-#1693401238
-vim
-#1693401295
-git clone https://github.com/Dronne34/.font
-#1693401299
-git clone https://github.com/Dronne34/.fonts
-#1693401345
-fc
-#1693401373
-vim
-#1693401453
-timedatectl set-timezone Europe/Bucharest 
-#1693401546
-systemctl enable bluetooth
-#1693401557
-systemctl start bluetooth
-#1693401568
-bluetoothctl 
-#1693401789
-setfont 
-#1693401795
-setfont --help
-#1693401890
-setfont ter-u20b
-#1693403087
-systemctl restart bluetooth
-#1693403154
-rm -rf /run/media/dell/BACKUP/st-0.9 /run/media/dell/BACKUP/alacritty.yml /run/media/dell/BACKUP/fonts.conf /run/media/dell/BACKUP/pkglist.txt 
-#1693403187
-rm -rf /run/media/dell/BACKUP/Apps /run/media/dell/BACKUP/System Volume Information 
-#1693403260
-rm -rf /run/media/dell/BACKUP/Dell/Home/Google-Drive/apps 
-#1693405808
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc{,.common} |     column -t -s $'\t' |     rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693405851
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc |     column -t -s $'\t' |  rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693406163
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/mpv.conf |     column -t -s $'\t' |  rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693406202
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/imput.conf |     column -t -s $'\t' |  rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693406225
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/input.conf |     column -t -s $'\t' |  rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693406239
-rofi-theme-selector 
-#1693406311
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/input.conf |     column -t -s $'\t' |  rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
-#1693406335
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/input.conf |     column -t -s $'\t' |  yad
-#1693406345
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/mpv/input.conf |     column -t -s $'\t' |  fzf
-#1693406370
-awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc |     column -t -s $'\t' | fzf
-#1693407463
-vim .xinitrc 
-#1693407843
-sudo pacman -Syu base-devel
-#1693406966
-./record.sh 
-#1693407181
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | less
-#1693407218
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693407241
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | less
-#1693407310
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693481025
-iwd
-#1693492304
-sudo pacman -Si qtile
-#1693492346
-sudo pacman -S qtile
-#1693492473
-sudo pacman -S python-bowler python-dbus-next python-iwlib python-keyring python-mpd2 python-psutil python-pywlroots
-#1693481100
-update
-#1693491697
-trizen Xephyr
-#1693491817
-xephyr
-#1693491834
-Xephyr 
-#1693491847
-Xephyr 800x600
-#1693491891
-Xephyr :1 -ac -screen 800x600 &
-#1693492025
-Xephyr DISPLAY=:1 dwm
-#1693492062
-Xephyr :1 -ac -screen 800x600  dwm
-#1693492071
-Xephyr -br -ac -noreset -screen 800x600 :1
-#1693492128
-DISPLAY=:1 dwm
-#1693492138
-DISPLAY=:1 xterm
-#1693492145
-DISPLAY=:1 alacritty
-#1693492159
-Xephyr -br -ac -noreset -screen 800x600 :1
-#1693492176
-Xephyr -br -ac -noreset -screen 800x600 DISPLAY=:1 dwm
-#1693492182
-Xephyr -br -ac -noreset -screen 800x600 DISPLAY=:1 
-#1693492519
-Xephyr -br -ac -noreset -screen 800x600 DISPLAY=:1 qtile
-#1693492531
-Xephyr -br -ac -noreset -screen 800x600
-#1693492556
-rm -rf /tmp/.X0-lock
-#1693492558
-Xephyr -br -ac -noreset -screen 800x600
-#1693492889
-qtile --help
-#1693492939
-qtile check
-#1693492973
-qtile --help start
-#1693492986
-trizen mypy
-#1693493004
-qtile check
-#1693493027
-ml
-#1693493056
-locate qtile
-#1693493081
-mkdir .config/qtile
-#1693493087
-ls .config/qtile/
-#1693493100
-cp -rf /usr/share/doc/qtile/default_config.py .config/qtile/
-#1693493107
-qtile check
-#1693493169
-trizen stub
-#1693493376
-locate qtile
-#1693495320
-locate xephyr
-#1693495336
-qtile -h
-#1693495346
-qtile check
-#1693495440
-./xephyr 
-#1693495459
-./xephyr .config/qtile/config.py 
-#1693504396
-xprop
-#1693504544
-KKLJJJJ
-#1693504547
-LL
-#1693504660
-qtile reload
-#1693504675
-qtile -r
-#1693504681
-qtile check
-#1693505413
-trizen qtile-extras
-#1693505493
-sudo pacman -Syu archlinux-keyring 
-#1693505508
-trizen qtile-extras
-#1693505548
-trizen qtile
-#1693505782
-trizen cairocffi
-#1693505801
-trizen xcb
-#1693505964
-makepkg -i
-#1693506046
-makepkg -si
-#1693506065
-makepkg 
-#1693506133
-makepkg --help
-#1693506147
-makepkg -d
-#1693506161
-makepkg -d -i
-#1693506205
-makepkg -d -i --needed
-#1693506230
-trizen  cairocffi
-#1693506251
-trizen cffi
-#1693506333
-makepkg -i
-#1693506503
-cleanup
-#1693507082
-Wwrcw
-#1693507083
-xit
-#1693507087
-exit
-#1693507091
-exit
-#1693507985
-qtile check
-#1693508268
-trizen  pypi
-#1693508274
-trizen  mypi
-#1693508293
-trizen  mypy
-#1693508350
-qtile check
-#1693508474
-xprop
-#1693552371
-git clone https://git.suckless.org/dwm
-#1693553010
-mkk
-#1693553304
-git clone https://github.com/Dronne34/dwm-6.4
-#1693553333
-cd dwm-6.4/
-#1693553337
-mkk
-#1693554481
-make clean 
-#1693556022
-DCxprop
-#1693556024
-xprop
-#1693554618
-patch < patch/adjacenttag-6.2.diff 
-#1693554653
-mkk
-#1693554703
-patch < patch/alwayscenter-20200625-f04cac6.diff 
-#1693554736
-patch < patch/alwaysontop-6.2.diff 
-#1693554765
-patch < patch/cyclelayouts-20180524-6.2.diff 
-#1693554796
-patch < patch/fullscreen-6.2.diff 
-#1693554854
-mkk
-#1693554885
-patch < patch/functionalgaps+pertag-6.2.diff 
-#1693555089
-mkk
-#1693555099
-patch < patch/rotatestack-20161021-ab9571b.diff 
-#1693555218
-mkk
-#1693555235
-patch < patch/switchtotag-6.2.diff 
-#1693555294
-mkk
-#1693556074
-xprop 
-#1693556120
-builtin cd -- Github/dwm
-#1693556122
-mkk
-#1693556312
-xprop 
-#1693556155
-builtin cd -- Github/dwm
-#1693556157
-mkk
-#1693556187
-xprop 
-#1693556257
-mkk
-#1693556453
-builtin cd -- Github/dwm
-#1693556460
-mkk
-#1693567856
-trizen update-icon
-#1693567875
-gtk-update-icon-cache .icons/
-#1693567880
-gtk-update-icon-cache .icons/Sardi-Flat/
-#1693568000
-mkk
-#1693556918
-builtin cd -- Github/dwm
-#1693556922
-mkk
-#1693567229
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693567283
-mkk
-#1693567519
-history | grep clone
-#1693567531
-git clone https://gituhb.com/Dronne34/slstatus
-#1693567612
-git clone https://github.com/Dronne34/slstatus
-#1693567738
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693567791
-mkk
-#1693568701
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693568753
-font
-#1693568799
-bash
-#1693568802
-font
-#1693568863
-font | fzf
-#1693568885
-font
-#1693568976
-ft
-#1693569078
-[200~alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf~
-#1693569083
-alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693569114
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693569029
-alis font
-#1693569035
-alias font
-#1693569042
-alias #
-#1693569049
-alias #font
-#1693569054
-alias # font
-#1693569155
-st -e fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693569174
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693569410
-gtk-update-icon-cache .icons/simp1e-master/
-#1693570166
-font
-#1693570168
-mkk
-#1693569759
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693569813
-builtin cd -- Github/slstatus
-#1693569828
-vim config.def.h 
-#1693569846
-cd ..
-#1693569848
-cd dwm
-#1693569854
-vim config.def.h 
-#1693570079
-mkk
-#1693570090
-vim config.def.h 
-#1693570274
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693570314
-mkk
-#1693570807
-sudo pacman Si vim
-#1693570817
-sudo pacman -Si vim
-#1693570827
-vi
-#1693571110
-vim.bashrc
-#1693571114
-vim .bashrc
-#1693570425
-vim .bashrc
-#1693570581
-trizen nvim
-#1693570623
-sudo pacman -Ss nvim
-#1693570637
-sudo pacman -Ss neovim
-#1693570680
-sudo pacman -Si neovim
-#1693570714
-trizen vim-theme
-#1693570726
-trizen vim-
-#1693570740
-trizen vim-the
-#1693570762
-sudo pacman -Ss vim-them
-#1693570765
-sudo pacman -Ss vim-
-#1693570948
-sudo pacman -S vim-syntastic
-#1693570965
-sudo pacman -Ss vim-auto
-#1693570968
-sudo pacman -Ss vim-au
-#1693570973
-sudo pacman -Ss vim-a
-#1693571041
-sudo pacman -S vim-syntastic vim-align vim-ansible 
-#1693571052
-vim .bashrc
-#1693571375
-vim help
-#1693571381
-vim .bashrc
-#1693571548
-.vim .vimrc
-#1693571553
-vim .vimrc
-#1693571595
-vim .bashrc
-#1693571701
-rm -rf .vimrc 
-#1693571703
-vim .bashrc
-#1693571904
-mkk
-#1693571743
-vim config.def.h
-#1693571924
-vim dwm.c
-#1693571948
-cd
-#1693571958
-vim .fontscripts 
-#1693571982
-vim config.def.h
-#1693571998
-builtin cd -- Github/dwm
-#1693572000
-vim config.def.h
-#1693572043
-mkk
-#1693573225
-sudo pacman -Ss gpick
-#1693573238
-sudo pacman -Ss pick
-#1693573253
-sudo pacman -S gpick
-#1693573268
-xprop
-#1693573353
-builtin cd -- Github/dwm
-#1693573357
-mkk
-#1693573991
-fc
-#1693574009
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574050
-builtin cd -- Github/dwm
-#1693574053
-mkk
-#1693574115
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574134
-mkk
-#1693574169
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574226
-mkk
-#1693574310
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574393
-fc-list :fontformat=TrueType,OpenType -f "%{family}\n" | sort -u | fzf
-#1693574403
-fc-list :fontformat=OpenType -f "%{family}\n" | sort -u | fzf
-#1693574432
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574480
-mkk
-#1693574498
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574502
-mkk
-#1693574515
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574579
-mkk
-#1693574622
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693574653
-mkk
-#1693574693
-[2~[2~5~5~5~
-#1693574696
-mkk
-#1693574777
-fl fantsw
-#1693574780
-fl fantsq
-#1693574785
-fl fantasq
-#1693574823
-mkk
-#1693574850
-fl medium
-#1693574877
-fl noto medium
-#1693574885
-fl "noto medium"
-#1693575897
-makepkg --help
-#1693575920
-makepkg -o
-#1693574911
-builtin cd -- Github/dwm
-#1693574914
-mkk
-#1693575226
-fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf
-#1693575253
-mkk
-#1693575268
-fl agave
-#1693575298
-mkk
-#1693575316
-fl agave
-#1693575401
-mkk
-#1693576014
-fc
-#1693576025
-fl spleen
-#1693576098
-mkk
-#1693576275
-builtin cd -- Github/dwm
-#1693576279
-mkk
-#1693579518
-trizen -i  i3status 
-#1693579528
-trizen -Si  i3status 
-#1693578981
-sudo pacman -S xchat
-#1693578989
-sudo pacman -Ss xchat
-#1693578997
-sudo pacman -S dexchat
-#1693579007
-sudo pacman -S hexchat
-#1693578458
-builtin cd -- Github/dwm
-#1693578461
-mkk
-#1693579823
-sudo pacman -S i3status
-#1693579838
-i3status 
-#1693579927
-ml
-#1693579932
-locate i3status.conf
-#1693579963
-mkdir .config/i3status
-#1693579988
-cp -rf /home/dell/Downloads/i3status-2.14/etc/i3status.conf .config/i3status/
-#1693580001
 i3status -c .config/i3status/i3status.conf 
 #1693580154
 i3status | dzen2 -fg white -ta r -w 1280 -fn "-misc-fixed-medium-r-normal--13-120-75-75-C-70-iso8859-1"
@@ -1606,3 +975,540 @@ make clean
 mkdir oh-my-zsh/custom/plugins
 #1693974709
 mkdir -p oh-my-zsh/custom/plugins
+mkdir -p Github
+cd Github/
+git clone https://github.com/Dronne34/extra
+git clone https://github.com/Dronne34/dwm-6.4.1
+cd extra/
+vim extra_aur.sh 
+./extra_aur.sh 
+cd ..
+cd dwm-6.4.1/
+sudo make  install
+reboot
+#1698328493
+cd Github/
+#1698328511
+git clone https://github.com/Dronne34/st-0.9
+#1698328518
+git clone https://github.com/Dronne34/dmenu
+#1698328523
+cd st-0.9/
+#1698328534
+ls .local/bin/
+#1698328551
+sudo make install 
+#1698328598
+cd ..
+#1698328602
+cd dmenu/
+#1698328606
+sudo make install 
+#1698328911
+builtin cd -- Github/dmenu
+#1698328964
+sudo make install 
+#1698329113
+cd ..
+#1698329116
+cd st-0.9/
+#1698329124
+sudo make clean install 
+#1698329189
+make clean install 
+#1698329259
+sudo make clean install 
+#1698329414
+gh auth login 
+#1698329487
+git_update 
+#1698329512
+cd ..
+#1698329515
+cd st-0.9/
+#1698329518
+git_update 
+#1698329540
+make clean 
+#1698329544
+git_update 
+#1698329560
+cd ..
+#1698329565
+make clean 
+#1698329568
+git_update 
+#1698329713
+gl
+#1698329754
+htop 
+#1698329777
+tm
+#1698329783
+htop 
+#1698329807
+tm
+#1698329838
+htop 
+#1698329845
+tm
+#1698329883
+htop 
+#1698329874
+htop 
+#1698329896
+tm
+#1698329927
+htop 
+#1698330215
+builtin cd -- Github/dwm-6.4.1
+#1698330228
+rm config.h
+#1698330234
+make
+#1698330281
+rm config.h
+#1698330289
+make clean 
+#1698330309
+make
+#1698330315
+sudo make install 
+#1698330368
+rm config.h
+#1698330373
+sudo make install 
+#1698330384
+make clean 
+#1698330393
+make
+#1698330405
+builtin cd -- Github/dwm-6.4.1
+#1698330407
+make clean 
+#1698330413
+sudo make install 
+#1698330426
+rm config.h
+#1698330430
+make clean 
+#1698330434
+sudo make install 
+#1698330447
+rm config.h
+#1698330453
+make clean 
+#1698330460
+sudo make clean install 
+#1698330480
+alias mkk
+#1698330519
+sudo rm -rf config.h & make clean && sudo  make clean install
+#1698330581
+make
+#1698330596
+rm config.h
+#1698330609
+sudo make clean install 
+#1698330644
+rm config.h
+#1698330648
+sudo make clean install 
+#1698330666
+rm config.h
+#1698330676
+make clean 
+#1698330679
+make
+#1698330688
+sudo make clean install 
+#1698330737
+rm config.h
+#1698330739
+sudo make clean install 
+#1698330795
+xprop
+#1698331006
+rm config.h
+#1698331013
+sudo make clean install 
+#1698331056
+tm
+#1698331294
+cd ..
+#1698331330
+git clone --depth=1 https://github.com/Dronne34/config
+#1698331355
+cd config/
+#1698331360
+git_update 
+#1698335576
+builtin cd -- Github/dwm-6.4.1
+#1698335582
+make clean 
+#1698335587
+rm config.h
+#1698335596
+sudo make clean install 
+#1698335856
+xprop
+#1698336057
+builtin cd -- Github/dwm-6.4.1
+#1698336064
+rm config.h
+#1698336069
+sudo make clean install 
+#1698336112
+xprop 
+#1698336184
+history 
+#1698336196
+xprop 
+#1698336334
+builtin cd -- Github/dwm-6.4.1
+#1698336339
+rm config.h
+#1698336352
+sudo make clean install 
+#1698336486
+rm config.h
+#1698336491
+sudo make clean install 
+#1698336559
+xprop
+#1698337463
+builtin cd -- Github/dwm-6.4.1
+#1698337467
+rm config.h
+#1698337472
+sudo make clean install 
+#1698337509
+xprop
+#1698338259
+builtin cd -- Github/dwm-6.4.1
+#1698338265
+rm config.h
+#1698338271
+sudo make clean install 
+#1698339031
+rm config.h
+#1698339038
+builtin cd -- Github/dwm-6.4.1
+#1698339040
+rm config.h
+#1698339045
+make
+#1698339063
+rm config.h
+#1698339069
+sudo make clean install 
+#1698339250
+systemctl enable bluetooth.service 
+#1698339268
+systemctl start bluetooth.service 
+#1698339285
+bluetoothctl 
+#1698339404
+rm config.h
+#1698339409
+sudo make clean install 
+#1698339957
+builtin cd -- Downloads/dwm-6.4
+#1698339973
+patch --dry-run < patch/centeredmaster-6.1.diff 
+#1698339986
+patch --dry-run < patch/dwm-windowrolerule-6.2.diff 
+#1698340033
+patch  < patch/dwm-windowrolerule-6.2.diff 
+#1698340052
+patch --dry-run < patch/functionalgaps_functionalgaps+pertag-6.2.diff 
+#1698340069
+patch  < patch/functionalgaps_functionalgaps+pertag-6.2.diff 
+#1698340088
+patch --dry-run < patch/switchtotag_switchtotag-6.2.diff 
+#1698340462
+make clean 
+#1698340465
+make
+#1698340694
+xprop
+#1698340727
+make
+#1698340732
+rm config.h
+#1698340734
+make
+#1698340737
+rm config.h
+#1698340740
+make clean 
+#1698340744
+make
+#1698340756
+make clean 
+#1698340757
+make
+#1698340761
+rm config.h
+#1698340764
+make
+#1698340786
+patch --dry-run < patch/switchtotag_switchtotag-6.2.diff 
+#1698340798
+patch < patch/switchtotag_switchtotag-6.2.diff 
+#1698340936
+rm config.h
+#1698340941
+make clean 
+#1698340945
+make
+#1698341080
+make clean 
+#1698341081
+make
+#1698341118
+make clean 
+#1698341120
+make
+#1698341139
+patch --dry-run < patch/alwayscenter_alwayscenter-20200625-f04cac6.diff
+#1698341148
+patch < patch/alwayscenter_alwayscenter-20200625-f04cac6.diff
+#1698341202
+patch --dry-run < patch/status2d-20200508-60bb3df.diff 
+#1698341213
+patch < patch/status2d-20200508-60bb3df.diff 
+#1698341250
+patch --dry-run < patch/rotatestack_rotatestack-20161021-ab9571b.diff 
+#1698341547
+patch  < patch/rotatestack_rotatestack-20161021-ab9571b.diff 
+#1698341558
+make clean 
+#1698341563
+make
+#1698341570
+rm config.h
+#1698341574
+make clean 
+#1698341578
+make
+#1698341959
+rm config.h
+#1698341962
+make clean 
+#1698341964
+make
+#1698341984
+rm config.h
+#1698341986
+make clean 
+#1698341991
+make
+#1698342003
+sudo make clean install 
+#1698342025
+make clean 
+#1698342028
+rm config.h
+#1698342030
+make
+#1698342033
+sudo make clean install 
+#1698342075
+xprop
+#1698342142
+rm config.h
+#1698342145
+make clean 
+#1698342149
+make
+#1698342154
+sudo make clean install 
+#1698342223
+builtin cd -- Downloads/dwm-6.4
+#1698342277
+patch --dry-run < patch/fullscreen_fullscreen-6.2.diff
+#1698342306
+subl patch/fullscreen_fullscreen-6.2.diff 
+#1698342452
+patch --dry-run < patch/fullscreen_fullscreen-6.2.diff
+#1698342475
+patch < patch/fullscreen_fullscreen-6.2.diff
+#1698342514
+make clean 
+#1698342521
+rm config.h
+#1698342526
+make
+#1698342534
+sudo make clean install 
+#1698343116
+builtin cd -- Github/dwm-6.4.1
+#1698343120
+make clean 
+#1698343127
+rm config.h
+#1698343132
+make
+#1698343137
+sudo make clean install 
+#1698343192
+systemctl status bluetooth.service 
+#1698343289
+sudo vim /etc/systemd/system/bluetooth-disable-before-sleep.service
+#1698343351
+systemctl enable bluetooth-disable-before-sleep.service
+#1698343392
+cp  /etc/systemd/system/bluetooth-disable-before-sleep.service ~/Github/extra/
+#1698343398
+ls Github/extra/
+#1698343446
+systemctl restart bluetooth.service 
+#1698344179
+pacman -Si gnome-system-monitor 
+#1698344200
+sudo pacman -Rns gnome-system-monitor 
+#1698344317
+pamixer 
+#1698344323
+pamixer -h
+#1698345651
+pklist 
+#1698345798
+builtin cd -- Github/dwm-6.4.1
+#1698345801
+make clean 
+#1698345807
+gnomels
+#1698345828
+git_update 
+#1698345851
+cd ..
+#1698345857
+cd extra/
+#1698346015
+builtin cd -- Github/extra
+#1698346019
+git_update 
+#1698346112
+cd ..
+#1698346115
+cd config/
+#1698346117
+git_update 
+#1698346536
+cd Github/
+#1698346557
+git clone --depth=1 https://github.com/Dronne34/walldsk
+#1698346569
+cd walldsk/
+#1698346594
+cp -rf wall-* ~/.config/screen/
+#1698346853
+rm bookmarks_10_4_23.html
+#1698347186
+rm -rf archlinux-2023.*
+#1698347203
+rm arcolinuxs-lts-v23.07.01-x86_64.iso
+#1698347596
+builtin cd -- Github/dwm-6.4.1
+#1698347624
+git_update 
+#1698347807
+xprop
+#1698347940
+git_update 
+#1698348846
+trizen nets
+#1698348934
+trizen nextsink
+#1698349057
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+#1698349319
+pactl info
+#1698349466
+systemctl  restart pipewire-pulse.servic
+#1698349487
+systemctl  enable pipewire-pulse.servic
+#1698349510
+sudo pacman -S pipewire-pulse 
+#1698349603
+cd Downloads/
+#1698349609
+pklist 
+#1698349684
+meld pkglist.txt  ~/Github/extra/pklist.txt 
+#1698366534
+xprop 
+#1698366647
+systemctl enable libvirtd
+#1698366660
+systemctl start libvirtd
+#1698366705
+sudo pacman -S qemu
+#1698367876
+git clone --depth=1 https://github.com/Dronne34/dwm-6.4
+#1698367927
+pklist 
+#1698368275
+virsh list --all
+#1698368280
+sudo virsh list --all
+#1698368404
+sudo usermod -G libvirt -a dell 
+#1698368436
+sudo vim /etc/libvirt/libvirt.conf 
+#1698368497
+sudo vim /etc/libvirt/libvirtd.conf 
+#1698368673
+sudo virsh list --all 
+#1698368787
+sudo virsh net-start default 
+#1698368802
+sudo virsh net-autostart default 
+#1698369155
+sudo pacman -S xf86-video-intel
+#1698369267
+sudo vim /etc/X11/xorg.conf.d/20-intel.conf
+#1698369604
+cp /etc/X11/xorg.conf.d/20-intel.conf Github/extra/
+#1698369610
+ls Github/extra/
+#1698369777
+pacman -Si libva-intel-driver
+#1698369860
+sudo pacman -S xorg
+#1698369987
+alias pklist
+#1698370018
+comm -12 <(pacman -Qqe | sort) <(pacman -Sql core extra  multilib | sort) > list.txt
+#1698370474
+sudo vim /etc/X11/xorg.conf.d/20-intel.conf
+#1698370613
+builtin cd -- Github/dwm-6.4
+#1698370622
+sudo make install 
+#1698370796
+builtin cd -- Github/dwm-6.4.1
+#1698370802
+sudo make install 
+#1698370819
+sudo make clean install 
+#1698370846
+sudo vim /etc/X11/xorg.conf.d/20-intel.conf
+#1698370897
+sudo pacman -Rns qemu-base 
+#1698370908
+sudo pacman -S qemu
+#1698379385
+pklist 
+#1698379602
+git_update
+#1698379714
+history | grep sudo
+#1698379737
+sudo usermod -G libvirt -a $USER
+#1698379897
+cd ..
+#1698379924
+git clone --depth=1 https://github.com/Dronne34/home
