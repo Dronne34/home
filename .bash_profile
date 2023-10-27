@@ -39,10 +39,8 @@ fi
 
 
 # MPD daemon start (if no other user instance exists)
-[ ! -s ~/.config/mpd/pid ] && mpd
+# [ ! -s ~/.config/mpd/pid ] && mpd
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
-
-# export PATH=~/.local/shell:$PATH
