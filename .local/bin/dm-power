@@ -1,11 +1,11 @@
 #!/bin/bash
 # . $HOME/.local/bin/dmenu-theming
-RET=$(echo -e "shutdown\nreboot\nlogout\ncancel\ndwm-exit" | dmenu  $prompt $lines $colors $font $xoffset $yoffset $width  -p "Logout")
+RET=$(echo -e "Shutdown\nReboot\nLogout\nCancel\nKill X" | dmenu -p "What do you wanna do?")
 
 case $RET in
-	shutdown) systemctl poweroff ;;
-	reboot) systemctl reboot ;;
-	logout) loginctl terminate-session $XDG_SESSION_ID ;;
-    dwm-exit) killall dwm ;;
+	"Shutdown")  systemctl poweroff ;;
+	"Reboot")    systemctl reboot ;;
+	"Logout")    loginctl  terminate-session $XDG_SESSION_ID ;;
+    "Kill X")    pkill     Xorg || pkill X ;;
 	*) ;;
 esac
