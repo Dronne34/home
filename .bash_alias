@@ -157,6 +157,7 @@ alias pklist="comm -12 <(pacman -Qqe | sort) <(pacman -Sql core extra | sort) > 
 alias tm="~/.local/shell/theme -i"
 alias mkk="rm -rf config.h & make clean && make clean install"
 alias pak="sudo pacman -Sy archlinux-keyring"
+alias cm='chmod u+x '
 # alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf"
 
 }
