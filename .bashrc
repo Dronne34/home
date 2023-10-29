@@ -26,9 +26,12 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 shopt -s checkwinsize
 
 export PS1="\[$(tput setaf 38)\]\u\[$(tput setaf 76)\]@\[$(tput setaf 11)\]\h \[$(tput setaf 199)\]\w \[$(tput sgr0)\]$ "
-export PS1="\[\e[38;5;38m\]\u\[\e[38;5;76m\]@\[\e[38;5;11m\]\h \[\e[38;5;29m\]\w \[\033[0m\]$ "
+export PS1="\[\e[38;5;29m\]\u\[\e[38;5;76m\]@\[\e[38;5;11m\]\h \[\e[38;5;29m\]\w \[\033[0m\]$ "
 export QT_STYLE_OVERRIDE=kvantum
 
+export WWW_HOME=https://duckduckgo.com/
+export LYNX_CFG=~/.config/lynx/lynx.cfg
+export LSS=~/.config/lynx/lynx.lss
 #EDITOR=nano;
 # export QT_QPA_PLATFORMTHEME=qt5ct;
 # export PAGER="most"
