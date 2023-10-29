@@ -1,133 +1,163 @@
 #!/usr/bin/env bash
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-
-
-
-HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
-PROMPT_COMMAND="history -a; history -n"
-HISTCONTROL=ignoreboth
-TERMINAL=alacritty
-EDITOR=vim
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
-HISTTIMEFORMAT="%d/%m/%y %T "
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-export PS1="\[$(tput setaf 38)\]\u\[$(tput setaf 76)\]@\[$(tput setaf 11)\]\h \[$(tput setaf 199)\]\w \[$(tput sgr0)\]$ "
-export PS1="\[\e[38;5;29m\]\u\[\e[38;5;76m\]@\[\e[38;5;11m\]\h \[\e[38;5;29m\]\w \[\033[0m\]$ "
-export QT_STYLE_OVERRIDE=kvantum
-
-export WWW_HOME=https://duckduckgo.com/
-export LYNX_CFG=~/.config/lynx/lynx.cfg
-export LSS=~/.config/lynx/lynx.lss
-#EDITOR=nano;
-# export QT_QPA_PLATFORMTHEME=qt5ct;
-# export PAGER="most"
-export VISUAL=vim;
-export HISTTIMEFORMAT="%F %T"
-export _JAVA_AWT_WM_NONREPARENTING=1;
-# export MANPAGER="less -R --use-color -Dd+g -Du+b"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# man 2 select
-export MANROFFOPT="-P -c"
-export LD_LIBRARY_PATH=/usr/local/lib
-
-export XMONAD_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xmonad" # xmonad.hs is expected to stay here
-export XMONAD_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/xmonad"
-export XMONAD_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/xmonad"
-
-
-[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
-# export PATH=/bin/lscript:/bin/lscript:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-# Get color support for 'less'
-export LESS="--RAW-CONTROL-CHARS"
-
-#ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
-### COUNTDOWN   
-
-cdown () {
-    N=$1
-  while [[ $((--N)) >  0 ]]
-    do
-        echo "$N" |  figlet -c | lolcat &&  sleep 1
-    done
-}
-
-
-# Use colors for less, man, etc.
-[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
-export LESS_TERMCAP_mb=$'\e[1;33m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;32m'
-  ### ARCHIVE EXTRACTION
-# usage: ex <file>
-ex ()
 {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;      
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+
+alias ll='lsd  -la --color=auto'
+alias la='ls -a'
+alias ls='lsd -la --color=auto'         
+alias l.="ls -A | grep '^\.'" 
+#github alias     
+alias addup="git add -u"
+alias branch="git branch"
+alias checkout="git checkout"
+alias clone="git clone"
+alias commit="git commit -m"
+alias fetch="git fetch"
+alias pull="git pull origin"
+alias push="git push origin"
+alias stat="git status"  # 'status' is protected name so using 'stat' instead
+alias tag="git tag"
+alias gad="git add ."
+alias grm="git rm --cached "
+alias gl='gh repo list'
+alias ga='gh auth login'
+alias gc='gh repo clone'
+alias gr='gh repo delete'
+
+
+
+alias cd..='cd ..'
+alias pdw="pwd"
+alias b='bash'
+alias k="killall"
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias cm='chmod u+x '
+
+#readable output
+alias df='df -h'
+
+#pacman unlock
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+#free
+alias free="free -mt"
+
+#continue download
+alias wget="wget -c"
+
+#search
+alias search='pacman -Ss'
+
+#userlist
+alias userlist="cut -d: -f1 /etc/passwd"
+
+#merge new settings
+alias merge="xrdb ~/.Xresources"
+
+# Aliases for software managment
+# pacman or pm
+alias update='sudo pacman -Syyu --noconfirm && echo -e "\e[38;5;76m  Updates Done!"'
+alias mk='makepkg -sri'
+
+# trizen as aur helper - updates everything
+alias pksyua='trizen -Syu --noconfirm && echo -e "\e[38;5;76m  AUR Updates Done!"'
+
+#ps
+alias ps="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+#grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#improve png
+# alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
+alias mog="mogrify  -background none -format  png *.svg"
+#add new fonts
+alias fc='sudo fc-cache -fv'
+alias fl='fc-list | grep -i '
+
+#locatedb
+alias lo='locate "\*.dat" -q '
+
+#hardware info --short
+alias hw="hwinfo --short"
+alias xd="xdotool selectwindow getwindowgeometry"
+#get fastest mirrors in your neighborhood 
+alias mirror="sudo reflector -f 30 -l 30 --number 5 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+#mounting the folder Public for exchange between host and guest on virtualbox
+alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
+
+
+#alias media
+alias nc="ncmpcpp"
+alias ping='ping google.com -c5'
+alias play='mplayer -msgcolor -msgmodule -nolirc'
+alias playlist='mplayer -msgcolor -msgmodule -nolirc -playlist '
+alias twitch='mpv --ytdl-raw-options=config-location=~/.config/yt-dlp/config'
+alias yta-mp3='youtube-dl --extract-audio  -f bestaudio --audio-format mp3 --embed-thumbnail --prefer-ffmpeg --output "%(title)s.%(ext)s" '
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+#Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+
+#Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias trash='sudo rm -rf ~/.local/share/Trash/*'
+alias temp='sudo rm -rf /tmp/*'
+alias du="du -sh /var/cache/pacman/pkg/"
+
+#copy files  
+#alias cp='rsync -zvhP'
+alias mv='rsync -zvhP --remove-source-files'
+
+#qemu-system#
+alias sda='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sda,cache=none,if=virtio -boot d'
+alias sdc='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sdc,cache=none,if=virtio -boot d'
+alias sdb='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sdb,cache=none,if=virtio -boot d'
+
+#SYSTEM#
+alias zz='lsblk -f'
+alias screen='scrcpy --max-size 1024'
+alias re='sudo systemctl reboot -f'
+alias po='sudo systemctl poweroff'
+alias pwg="pwgen 12  -1 -n -s"
+alias cmi="./configure && make && sudo make install"
+alias wlpup="sudo ifconfig wlp0s20u2  up"
+alias wlpdo="sudo ifconfig wlp0s20u2  down"
+
+
+alias fat='sudo mkfs.fat -F32 -v -I -n USB /dev/sda'
+alias fatb='sudo mkfs.fat -F32 -v -I /dev/sdb'
+alias fatc='sudo mkfs.fat -F32 -v -I /dev/sdc'
+alias lsblk="lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,UUID"
+
+alias usb='systemctl --user restart gvfs-udisks2-volume-monitor'
+alias reload="sudo systemctl restart NetworkManager.service"
+alias start="sudo systemctl start NetworkManager.service"
+alias stop="sudo systemctl stop NetworkManager.service"
+alias iwd='sudo systemctl restart iwd && echo -e "\Uf2f1 \x1b[32;1m Iwd Restarted!"'
+alias ctl="systemctl"
+alias su="sudo su"
+alias cl='clear'
+alias ifc="ifconfig"
+alias restore='pacman -S --needed - < pkglist.txt'
+#package AUR
+alias ml='sudo updatedb && echo -e "\Uf002\x1b[32;1m Database Update Done!"'
+
+alias pkaur="pacman -Qqem > pkaur.txt"
+alias pklist="comm -12 <(pacman -Qqe | sort) <(pacman -Sql core extra  | sort) > pkglist.txt"
+alias tm="~/.local/shell/theme -i"
+alias mkk="rm -rf config.h & make clean && make clean install"
+alias pak="sudo pacman -Sy archlinux-keyring"
+# alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf"
+
 }
-
-export THEME_HISTFILE=~/.theme_history
-[ -e "$THEME_HISTFILE" ] && ~/.local/shell/theme "$(~/.local/shell/theme -l|tail -n1)"
-
-
-
-export SUDO_PROMPT="PROCEED WITH CAUTION...PASSWORD: "
-#unset SUDO_PROMPT
-
-case ${TERM} in
-
-  st*|xterm*|rxvt*|Eterm|alacritty*|aterm|kterm|gnome*)
-     PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
-
-    ;;
-  screen*)
-    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
-    ;;
-esac
-
- ~/.local/bin/fetch
-shopt -s expand_aliases
-
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source ~/.bash_alias
-source ~/.fonts/*.sh
-
