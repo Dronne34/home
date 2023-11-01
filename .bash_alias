@@ -162,6 +162,6 @@ alias cm='chmod u+x '
 ## transmission
 alias tsd='transmission-daemon'
 alias tsa='transmission-remote -a '
-alias tsl'transmission-remote -l'
+alias tsl='transmission-remote -l'
 
 }
