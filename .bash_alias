@@ -24,6 +24,18 @@ alias ga='gh auth login'
 alias gc='gh repo clone'
 alias gr='gh repo delete'
 
+alias gtdw='git clone --depth=1 https://github.com/Dronne34/dwm-6.4.1'
+alias gtdm='git clone --depth=1 https://github.com/Dronne34/dmenu'
+
+alias gtc='git clone --depth=1 https://github.com/Dronne34/config'
+alias gte='git clone --depth=1 https://github.com/Dronne34/extra'
+alias gth='git clone --depth=1 https://github.com/Dronne34/home'
+alias gts='git clone --depth=1 https://github.com/Dronne34/st-0.9'
+
+
+
+
+
 
 
 alias cd..='cd ..'
@@ -163,5 +175,7 @@ alias cm='chmod u+x '
 alias tsd='transmission-daemon'
 alias tsa='transmission-remote -a '
 alias tsl='transmission-remote -l'
+
+
 
 }
