@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIR="$HOME/.config/sxhkd"
+
+# Terminate already running apps instances
+killall  sxhkd
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x sxhkd >/dev/null; do sleep 1; done
+
+# Launch Sxhkd, using default config location ~/.config/
+sxhkd "$DIR"/sxhkdrc &
+
+notify-send -t 2000 -h string:bgcolor:#2B323A -h string:fgcolor:#ff4444 -h string:frcolor:#44ff44 "Sxhkd Reload!"
