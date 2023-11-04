@@ -10,7 +10,7 @@ alias l.="ls -A | grep '^\.'"
 alias addup="git add -u"
 alias branch="git branch"
 alias checkout="git checkout"
-alias clone="git clone --depth=1 "
+alias clone="git clone"
 alias commit="git commit -m"
 alias fetch="git fetch"
 alias pull="git pull origin"
@@ -32,7 +32,7 @@ alias gte='git clone --depth=1 https://github.com/Dronne34/extra'
 alias gth='git clone --depth=1 https://github.com/Dronne34/home'
 alias gts='git clone --depth=1 https://github.com/Dronne34/st-0.9'
 
-
+alias gtu='git_update'
 
 
 
