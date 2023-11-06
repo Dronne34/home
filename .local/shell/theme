@@ -9429,7 +9429,7 @@ two-firewatch
 1:  #e06c75
 2:  #98c379
 3:  #e5c07b
-4:  #61afef
+4:  #282c34
 5:  #c678dd
 6:  #56b6c2
 7:  #dcdfe4
@@ -9441,9 +9441,9 @@ two-firewatch
 13: #c678dd
 14: #56b6c2
 15: #dcdfe4
-foreground: #abb2bf
+foreground: #D8E70E
 background: #282c34
-cursor: #abb2bf
+cursor: #D8E70E
 
 unikitty-dark
 0: #2e2a31
