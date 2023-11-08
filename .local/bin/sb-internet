@@ -5,7 +5,8 @@
 # Show 🔒 if a vpn connection is active
 
 case $BLOCK_BUTTON in
-	1) "$TERMINAL" -e nmtui; pkill -RTMIN+4 dwmblocks ;;
+# -g -driver X -html-user-font-size 20  -html-g-background-color 0x363A48  -gamma-correction 1 -html-g-link-color 0x19B339 -html-g-text-color 0xffffff; pkill -RTMIN+4 dwmblocks ;;
+	1) setsid -f $TERMINAL -e links  https://archlinux.org/; pkill -RTMIN+4 dwmblocks ;;
 	3) notify-send "🌐 Internet module" "\- Click to connect
 ❌: wifi disabled
 📡: no wifi connection

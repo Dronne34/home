@@ -5,7 +5,7 @@ filter() { sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸ /g;/\\[playing\\]
 pidof -x sb-mpdup >/dev/null 2>&1 || sb-mpdup >/dev/null 2>&1 &
 
 case $BLOCK_BUTTON in
-	1) mpc --host=localhost --port=6500 status | filter ; setsid -f "$TERMINAL" -e ncmpc --host=localhost --port=6500pp ;;  # right click, pause/unpause
+	1) mpc --host=localhost --port=6500 status | filter ; setsid -f "$TERMINAL" -e ncmpcpp --host=localhost --port=6500 &  setsid -f "$TERMINAL" -n "cava" cava ;;  # right click, pause/unpause
 	2) mpc --host=localhost --port=6500 toggle | filter ;;  # right click, pause/unpause
 	3) mpc --host=localhost --port=6500 status | filter ; notify-send "🎵 Music module" "\- Shows mpd song playing.
 - ⏸ when paused.

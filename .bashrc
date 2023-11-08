@@ -11,8 +11,10 @@
 HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
 PROMPT_COMMAND="history -a; history -n"
 HISTCONTROL=ignoreboth
-TERMINAL=alacritty
+TERMINAL=st
 EDITOR=vim
+export TERMINAL=st
+export EDITOR=vim
 # append to the history file, don't overwrite it
 shopt -s histappend
 
