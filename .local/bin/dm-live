@@ -38,7 +38,7 @@ main() {
 
 		3)
 			notification "  Dua-Lipa   🎶";
-            URL="https://youtu.be/BFBZ6QybP68"
+            URL="https://www.youtube.com/watch?v=BFBZ6QybP68"
 			break
 			;;
 	
