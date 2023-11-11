@@ -14,6 +14,7 @@ exec chmod u+x .local/bin/* &
 exec eval "$(ssh-agent -s)"  &
 exec sxhkd &    
 exec dunst &
+# exec $(sleep 4s && "$HOME/bar.sh") &
 # exec awesome
 # exec i3
 # exec xmobar &
