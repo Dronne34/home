@@ -9,6 +9,6 @@ DEVICE_NAME="intel_backlight"
 # Monitor changes to the brightness file
 # inotifywait -m -e modify "$BACKLIGHT_DIR/$DEVICE_NAME/brightness" | while read -r event; do
     current_brightness=$(cat "$BACKLIGHT_DIR/$DEVICE_NAME/brightness")
-    notify-send -i "whitebalance" -r 3456 -t 700 "Brightness Changed" "Current brightness: $current_brightness"
+    notify-send -i "whitebalance" -r 3456 -t 1200 "Brightness Changed" "Current brightness: $current_brightness"
 # done;
 # exit 1
