@@ -5,7 +5,7 @@
 # Show 🔒 if a vpn connection is active
 
 case $BLOCK_BUTTON in
-	1) setsid -f links -g  -html-user-font-size 20  https://archlinux.org/; pkill -RTMIN+4 dwmblocks ;;
+	1) setsid -f $TERMINAL links   -html-user-font-size 20  https://archlinux.org/; pkill -RTMIN+4 dwmblocks ;;
 	3) notify-send "🌐 Internet module" "\- Click to connect
 ❌: wifi disabled
 📡: no wifi connection
