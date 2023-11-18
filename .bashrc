@@ -125,10 +125,11 @@ case ${TERM} in
     ;;
 esac
 
- ~/.local/bin/fetch
 shopt -s expand_aliases
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
 source ~/.fonts/*.sh
+# ~/.local/bin/fetch 
+zsh
