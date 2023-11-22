@@ -132,23 +132,31 @@ shopt -s expand_aliases
 source ~/.bash_alias
 source ~/.fonts/*.sh
 # ~/.local/bin/fetch 
-export collor1="\e[32m"
-export collor2="\e[36m"
+# export collor1="\e[32m"
+# export collor2="\e[36m"
+# 
+# echo -e $collor1"I Use Arch Linux
+# very fast linux distro!"
+# 
+# echo -e $collor2"Hint! 🫑"
+# echo -e $collor2"pacman -S   'package_name'"
+# echo -e $collor2"pacman -Rns 'package_name'"
+# echo -e $collor2"sudo pacman -Syyu 'update'"
 
-echo -e $collor1"I Use Arch Linux
-very fast linux distro!"
+COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
+# Cow-spoken fortunes every time you open a terminal
+function cowsayfortune {
+    NUMOFCOWS=`cowsay -l | tail -n +2 | wc -w`
+    WHICHCOW=$((RANDOM%$NUMOFCOWS+1))
+    THISCOW=`cowsay -l | tail -n +2 | sed -e 's/\ /\'$'\n/g' | sed $WHICHCOW'q;d'`
 
-echo -e $collor2"Hint! 🫑"
-echo -e $collor2"pacman -S   'package_name'"
-echo -e $collor2"pacman -Rns 'package_name'"
-echo -e $collor2"sudo pacman -Syyu 'update'"
-
-powerline-daemon -q
-
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
+    #echo "Selected cow: ${THISCOW}, from ${WHICHCOW}"
+    fortune | cowsay -f $THISCOW -W 100
 }
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+fortune
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. ~/.config/powerline/.powerline.sh
