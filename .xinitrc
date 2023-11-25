@@ -5,7 +5,7 @@
 # exec nitrogen --set-auto --random ~/.config/screen/ &
 # exec float "$@" | ${SHELL:-"/bin/sh"} &
 # exec conky -c ~/.config/conky/clock.conf &
-# dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec picom --config  ~/.config/picom/picom.conf  &
 exec nitrogen --restore &
