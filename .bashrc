@@ -131,7 +131,7 @@ shopt -s expand_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
 source ~/.fonts/*.sh
-# ~/.local/bin/fetch 
+~/.local/bin/fetch
 # export collor1="\e[32m"
 # export collor2="\e[36m"
 # 
@@ -143,20 +143,20 @@ source ~/.fonts/*.sh
 # echo -e $collor2"pacman -Rns 'package_name'"
 # echo -e $collor2"sudo pacman -Syyu 'update'"
 
-COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
-# Cow-spoken fortunes every time you open a terminal
-function cowsayfortune {
-    NUMOFCOWS=`cowsay -l | tail -n +2 | wc -w`
-    WHICHCOW=$((RANDOM%$NUMOFCOWS+1))
-    THISCOW=`cowsay -l | tail -n +2 | sed -e 's/\ /\'$'\n/g' | sed $WHICHCOW'q;d'`
+# COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
+# # Cow-spoken fortunes every time you open a terminal
+# function cowsayfortune {
+#     NUMOFCOWS=`cowsay -l | tail -n +2 | wc -w`
+#     WHICHCOW=$((RANDOM%$NUMOFCOWS+1))
+#     THISCOW=`cowsay -l | tail -n +2 | sed -e 's/\ /\'$'\n/g' | sed $WHICHCOW'q;d'`
 
-    #echo "Selected cow: ${THISCOW}, from ${WHICHCOW}"
-    fortune | cowsay -f $THISCOW -W 100
-}
+#     #echo "Selected cow: ${THISCOW}, from ${WHICHCOW}"
+#     fortune | cowsay -f $THISCOW -W 100
+# }
 
-fortune
+# fortune
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
 . ~/.config/powerline/.powerline.sh
