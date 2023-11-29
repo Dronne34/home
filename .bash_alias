@@ -34,10 +34,6 @@ alias gts='git clone --depth=1 https://github.com/Dronne34/st-0.9'
 
 alias gtu='git_update'
 
-
-
-
-
 alias cd..='cd ..'
 alias pdw="pwd"
 alias b='bash'
@@ -144,7 +140,9 @@ alias pwg="pwgen 12  -1 -n -s"
 alias cmi="./configure && make && sudo make install"
 alias wlpup="sudo ifconfig wlp0s20u2  up"
 alias wlpdo="sudo ifconfig wlp0s20u2  down"
-
+alias scte='systemctl enable '
+alias scts='systemctl start '
+alias sctd='systemctl disable '
 
 alias fat='sudo mkfs.fat -F32 -v -I -n USB /dev/sda'
 alias fatb='sudo mkfs.fat -F32 -v -I /dev/sdb'
