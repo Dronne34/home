@@ -34,6 +34,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
+Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
