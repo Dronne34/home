@@ -130,7 +130,7 @@ shopt -s expand_aliases
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
-source ~/.fonts/*.sh
+# source ~/.fonts/*.sh
 ~/.local/bin/fetch
 # export collor1="\e[32m"
 # export collor2="\e[36m"
