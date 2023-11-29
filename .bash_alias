@@ -175,5 +175,10 @@ alias tsa='transmission-remote -a '
 alias tsl='transmission-remote -l'
 
 
+# vim
+alias vme='vim ~/Github/extra/extra_aur.sh'
+alias vmc='vim ~/Github/dwm-6.4.1/config.def.h'
+alias vmx='vim .xinitrc'
+
 
 }
