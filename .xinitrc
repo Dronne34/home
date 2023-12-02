@@ -6,7 +6,8 @@
 # exec float "$@" | ${SHELL:-"/bin/sh"} &
 # exec conky -c ~/.config/conky/clock.conf &
 # exec slstatus &
-dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+# dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+# xauth generate $DISPLAY
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec picom --config  ~/.config/picom/picom.conf  &
 exec nitrogen --restore &
