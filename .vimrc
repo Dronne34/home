@@ -3,6 +3,21 @@
 "    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 " endif
+set nocompatible
+
+filetype on
+
+filetype indent on
+
+set tabstop=4
+
+set incsearch
+
+set nowrap
+
+set showmode
+
+set cursorline
 
 syntax on
 
@@ -17,6 +32,13 @@ set wildmenu
 set termguicolors
 
 filetype plugin on
+
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred     guifg=white
+hi Normal ctermfg=blue ctermbg=262
+hi Cursor ctermbg=15 ctermfg=8
+hi CursorLine gui=underline cterm=underline
+hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark gray, 15 = white
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -38,10 +60,10 @@ Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
-" colorscheme nord
-colorscheme dracula
+" colorscheme slate
+" colorscheme dracula
 " colorscheme palenight
-" colorscheme onedark
+colorscheme onedark
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
@@ -122,3 +144,10 @@ let g:NERDToggleCheckAllLines = 1
       \ 'vimshell': ['vimshell','%{vimshell#get_status_string()}'],
       \ 'vaffle' : [ 'Vaffle', '%{b:vaffle.dir}' ],
       \ }
+
+
+augroup CustomCursorLine
+au!    
+au VimEnter * :hi! CursorLine gui=underline cterm=underline
+augroup END
+
