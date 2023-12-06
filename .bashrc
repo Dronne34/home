@@ -131,9 +131,10 @@ shopt -s expand_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
 # source ~/.fonts/*.sh
-~/.local/bin/fetch
+# ~/.local/bin/fetch
 # export collor1="\e[32m"
 # export collor2="\e[36m"
+pfetch
 # 
 # echo -e $collor1"I Use Arch Linux
 # very fast linux distro!"
