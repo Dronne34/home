@@ -3,6 +3,10 @@
 "    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 " endif
+" set Colorizer-auto
+
+" set Colorizer-hl-ft
+
 set nocompatible
 
 filetype on
@@ -43,7 +47,7 @@ hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark 
 call plug#begin('~/.vim/plugged')
 
 "call plug#begin()
-
+Plug 'https://github.com/ap/vim-css-color'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

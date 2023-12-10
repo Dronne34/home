@@ -70,6 +70,8 @@ alias mk='makepkg -sri'
 
 # trizen as aur helper - updates everything
 alias pksyua='trizen -Syu --noconfirm && echo -e "\e[38;5;76m  AUR Updates Done!"'
+alias tn='trizen '
+alias in='pacman -Si '
 
 #ps
 alias ps="ps auxf"
