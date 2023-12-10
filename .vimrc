@@ -47,6 +47,7 @@ hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark 
 call plug#begin('~/.vim/plugged')
 
 "call plug#begin()
+Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/ap/vim-css-color'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -64,10 +65,11 @@ Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
+colorscheme nord
 " colorscheme slate
 " colorscheme dracula
 " colorscheme palenight
-colorscheme onedark
+" colorscheme onedark
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
