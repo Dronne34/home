@@ -1,13 +1,12 @@
-
 #!/usr/bin/env bash
-
 # exec xss-lock  --transfer-sleep-lock -- ~/.config/i3/scripts/lock --nofork & 
 # exec nitrogen --set-auto --random ~/.config/screen/ &
 # exec float "$@" | ${SHELL:-"/bin/sh"} &
-# exec conky -c ~/.config/conky/clock.conf &
 # exec slstatus &
-# dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+# exec play_with_mpv &
 # xauth generate $DISPLAY
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+exec conky -c ~/.config/conky/conky-blue.conf &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec picom --config  ~/.config/picom/picom.conf  &
 exec nitrogen --restore &
@@ -17,7 +16,6 @@ exec chmod u+x .local/bin/* &
 exec eval "$(ssh-agent -s)"  &
 exec sxhkd &    
 exec dunst &
-exec play_with_mpv &
 exec dwmblocks & 
 exec ~/.local/bin/relaunch 
 exec dwm
