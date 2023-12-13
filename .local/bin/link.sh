@@ -1,14 +1,15 @@
 #!/bin/bash
-xdotool getwindowfocus
-xdotool key click 3
-sleep 3
-xdotool key click 1
-
-# Get the copied text from the clipboard
-copied_link=$(xclip -selection clipboard -o)
-
-# Print the copied link
-notify-send  "Copied link: $copied_link"
-
+xdotool getwindowfocus 
+sleep 0.2 
+xdotool  key click 3 
+xdotool  key Down 
+xdotool  key Down 
+xdotool  key Down 
+xdotool  key Down 
+xdotool  key Down 
+# xdotool  key Down 
+# copied_link=$(xclip -selection clipboard -o)
+# notify-send  "Copied link: $copied_link"
+xdotool key Return 
 mpv $(xclip -o) & exit
 
