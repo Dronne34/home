@@ -74,9 +74,6 @@ Sxiv.font: Ubuntu:style=bold:size=11
 
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
 ! This includes xterm and urxvt
-*.foreground:   #bbc2cf
-*.background:   #282c34
-*.cursorColor:  #bbc2cf
 ! special
 *.foreground:   #dfdfdf
 *.background:   #232332
