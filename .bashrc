@@ -7,7 +7,7 @@
 # See bash(1) for more options
 
 
-
+TRANSMISSION_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/transmission-daemon"
 HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
 PROMPT_COMMAND="history -a; history -n"
 HISTCONTROL=ignoreboth
