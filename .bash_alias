@@ -173,11 +173,11 @@ alias cm='chmod u+x '
 # alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf"
 ## transmission
 alias tsd="transmission-daemon"         # Transmission run daemon
-alias tsa="transmission-remote -a "     # Transmission add
+alias tsa="transadd "                   # Transmission add
 alias tsl="transmission-remote -l"      # Transmission list
 alias tse="transmission-remote --exit"  # Exit transmission
 alias tsc="transclr"                    # Transmission clear
-
+alias tsk="killall transmission-daemon" # Transmission kill
 # vim
 alias vme='vim ~/Github/extra/extra_aur.sh'
 alias vmc='vim ~/Github/dwm-6.4.1/config.def.h'
