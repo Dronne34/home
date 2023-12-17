@@ -1,112 +1,112 @@
-!  ____ _____ 
-! |  _ \_   _|  Derek Taylor (DistroTube)
-! | | | || |    http://www.youtube.com/c/DistroTube
-! | |_| || |    http://www.gitlab.com/dwt1/ 
-! |____/ |_|   
-
-
-Xft.dpi: 96
+Xft.dpi:       96
 Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: true
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcdfilter
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 
-XTerm*renderFont: true
-XTerm*faceName: xft:Hack, \
-                xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
-XTerm*faceSize: 12
-XTerm*utf8: 2
-XTerm*locale: true
+XTerm*background:        #d8d8d8
+XTerm*foreground:        #222D31
+XTerm*pointerColor:      #FF5500
+XTerm*faceName:          Iosevka Nerd Font Mono
+XTerm*faceSize:          12
 
-XTerm.vt100.translations: #override \n\
-  Ctrl <Key> j: smaller-vt-font() \n\
-  Ctrl <Key> k: larger-vt-font()
+XTerm*reverseVideo:      on
+XTerm*selectToClipboard: true
 
+background:                      #222D31
+foreground:                      #d8d8d8
+*fading:                          8
+*fadeColor:                       black
+cursorColor:                     #1ABB9B
+*pointerColorBackground:          #2B2C2B
+pointerColorForeground:          #F0D92F
 
-! Every shell is a login shell by default (for inclusion of all necessary environment variables)
-XTerm*loginshell: true
+!! black dark/light
+*color0:                          #00FF00
+*color8:                          #00FF00
 
-! I like a LOT of scrollback...
-XTerm*savelines: 16384
+!! red dark/light
+*color1:                          #ab4642
+*color9:                          #ab4642
 
-! double-click to select whole URLs :D
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+!! green dark/light
+*color2:                          #FFFFFF
+*color10:                         #00FF00
 
-URxvt*imLocale: en_US.UTF-8
-URxvt*termName: rxvt-unicode-256color
-URxvt*buffered: false
-URxvt.intensityStyles: false
-URxvt.font: xft:Hack:size=13, \
-            xft:JoyPixels:size=12, \
-            xft:Monospace:style=Medium:size=12   
-URxvt.saveLines: 2000
-URxvt.scrollBar: false
-URxvt.cursorColor: white
+!! yellow dark/light
+*color3:                          #55AA00
+*color11:                         #f7ca88
 
-!! Extensions
-URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
-URxvt.colorUL: #4682B4
-!! url-select
-URxvt.keysym.M-u: perl:url-select:select_next
-!!URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
-URxvt.url-select.underline: true
-!! keyboard-select:
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-!! resize-font
-URxvt.keysym.C-k:   font-size:increase
-URxvt.keysym.C-j:   font-size:decrease
-!! Matcher
-!!URxvt.url-launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
-URxvt.matcher.button: 1
-!!clipboard
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt*depth: 32
+!! blue dark/light
+*color4:                          #7cafc2
+*color12:                         #7cafc2
 
-! COLORS FOR SXIV
-Sxiv.foreground:   #bbc2cf
-Sxiv.background:   #282c34
-Sxiv.font: Ubuntu:style=bold:size=11
+!! magenta dark/light
+*color5:                          #ba8baf
+*color13:                         #ba8baf
 
+!! cyan dark/light
+*color6:                          #FFAA00
+*color14:                         #2794AA
 
-! FOR ALL OTHER PROGRAMS USE XRESOURCES
-! This includes xterm and urxvt
-! special
-*.foreground:   #dfdfdf
-*.background:   #232332
-*.cursorColor:  #dfdfdf
+!! white dark/light
+*color7:                          #d8d8d8
+*color15:                         #f8f8f8
 
+Xcursor.theme:xcursor-breeze
+!URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
+URxvt.font: xft:Iosevka Nerd Font Mono:size=10
+URxvt.scrollBar:false
+URxvt.perl-ext-common:...,keyboard-select
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.clipboard.autocopy:true
+URxvt.keysym.M-c:perl:clipboard:copy
+URxvt.keysym.M-v:perl:clipboard:paste
+URxvt.keysym.M-s:perl:keyboard-select:search
+URxvt.underlineColor:yellow
+URxvt.termName:rxvt
+!URxvt.perl-lib:/home/share/.urxvt/ext
+
+##########THEME-URXVT
+
+! terminal colors ------------------------------ 
+
+! Jellybeans Terminal Colours
+
+! vim: ft=xdefaults
+urxvt*background: #222D31
+urxvt*foreground: #DFB31B
 ! black
-*.color0:       #232328
-*.color8:       #e1aa57
-
+urxvt*color0: #1C1C1C
+urxvt*color8: #404040
 ! red
-*.color1:       #f94757
-*.color9:       #f45b69
-
+urxvt*color1: #85E70E
+urxvt*color9: #CF6A4C
 ! green
-*.color2:       #00b159
-*.color10:      #28b56f
-
+urxvt*color2: #85E70E
+urxvt*color10: #FFFFFF
 ! yellow
-*.color3:       #fcb928
-*.color11:      #f9c34f
-
+urxvt*color3: #49B8E0
+urxvt*color11: #9E96C4
 ! blue
-*.color4:       #1882dc
-*.color12:      #308bd8
-
+urxvt*color4: #667899
+urxvt*color12: #8197BF
 ! magenta
-*.color5:       #7474b3
-*.color13:      #7474b3
-
+urxvt*color5: #FFFFFF
+urxvt*color13: #C6B6EE
 ! cyan
-*.color6:       #33a5db
-*.color14:      #5fb5de
-
+urxvt*color6: #668799
+urxvt*color14: #8FBFDC
 ! white
-*.color7:       #8c7676
-*.color15:      #dfdfdf
+urxvt*color7: #888888
+urxvt*color15: #E8E8D3
+
+
+!! Dmenu
+dmenu.font : FantasqueSansMono Nerd Font:size=13
+dmenu.background : #373D4A
+dmenu.foreground : #FFFFFF
+dmenu.selbackground : #005577
+dmenu.selforeground : #FFFFFF

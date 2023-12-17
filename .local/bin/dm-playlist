@@ -1,0 +1,11 @@
+#!/bin/sh
+
+CMD_DMENU='dmenu -p "Select" -l 35'
+SONG=$(mpc --host=localhost --port=6500 playlist | $CMD_DMENU)
+
+SONG_NO=$(mpc --host=localhost --port=6500 playlist | grep -n "^$SONG$" | sed -e 's/\(.*\):.*/\1/')
+
+# check if dmenu really returned something
+if [ ! -z "$SONG_NO" ]; then
+mpc --host=localhost --port=6500 play $SONG_NO
+fi
