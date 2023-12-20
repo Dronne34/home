@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -6,14 +6,15 @@
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 
-
+TERM=st
 TRANSMISSION_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/transmission-daemon"
 HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
 PROMPT_COMMAND="history -a; history -n"
 HISTCONTROL=ignoreboth
-TERMINAL=st
+TERMINAL=xterm
 EDITOR=vim
-export TERMINAL=st
+export TERMINAL=xterm
+export TERM=st
 export EDITOR=vim
 # append to the history file, don't overwrite it
 shopt -s histappend
