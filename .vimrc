@@ -6,8 +6,7 @@
 " set Colorizer-auto
 
 " set Colorizer-hl-ft
-
-set nocompatible
+set mouse=a
 
 filetype on
 
@@ -27,9 +26,9 @@ syntax on
 
 set number
 
-set scrolloff=30
+" set scrolloff=30
 
-set tabstop=4
+" set tabstop=4
 
 set wildmenu
 
@@ -38,7 +37,7 @@ set termguicolors
 filetype plugin on
 
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred     guifg=white
-hi Normal ctermfg=blue ctermbg=262
+" hi Normal ctermfg=#0080FF ctermbg=#333B4A
 hi Cursor ctermbg=15 ctermfg=8
 hi CursorLine gui=underline cterm=underline
 hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark gray, 15 = white
@@ -47,8 +46,11 @@ hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark 
 call plug#begin('~/.vim/plugged')
 
 "call plug#begin()
+" Plug 'ap/vim-css-color'
+Plug 'gko/vim-coloresque'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'https://github.com/ap/vim-css-color'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -65,16 +67,25 @@ Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
-colorscheme nord
+" colorscheme nord
 " colorscheme slate
 " colorscheme dracula
-" colorscheme palenight
+colorscheme palenight
 " colorscheme onedark
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
 let g:fzf_action = { 'enter': 'tab split' }
+" let g:colorizer_auto_color = 1
+" let g:colorizer_syntax = 1
+" let g:colorizer_hex_pattern = ['#', '\%(\x\{3}\|\x\{6}\)', '']
+" au BufNewFile,BufRead *.css,*.html,*.htm  :ColorHighlight!
+" augroup auto_colorize
+" autocmd!
+" autocmd FileType * :ColorHighlight
+" augroup END
+
 
 " Start NERDTree and leave the cursor in it.
 " autocmd VimEnter * NERDTree
@@ -156,4 +167,3 @@ augroup CustomCursorLine
 au!    
 au VimEnter * :hi! CursorLine gui=underline cterm=underline
 augroup END
-
