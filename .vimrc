@@ -46,7 +46,7 @@ hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark 
 call plug#begin('~/.vim/plugged')
 
 "call plug#begin()
-" Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 Plug 'gko/vim-coloresque'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'

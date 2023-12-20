@@ -9,12 +9,15 @@ Xft.lcdfilter: lcddefault
 XTerm*background:        #d8d8d8
 XTerm*foreground:        #222D31
 XTerm*pointerColor:      #FF5500
+! Font
+XTerm*renderFont: true
 XTerm*faceName:          Iosevka Nerd Font Mono
 XTerm*faceSize:          12
 XTerm*saveLines: 16384
 XTerm*scrollTtyOutput: false
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
+
 
 !background:                      #222D31
 !foreground:                      #d8d8d8
@@ -23,6 +26,10 @@ XTerm*selectToClipboard: true
 !cursorColor:                     #1ABB9B
 !*pointerColorBackground:          #2B2C2B
 !pointerColorForeground:          #F0D92F
+
+! double-click to select whole URLs :D
+/* XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48 */
+
 
 !! Font size
 XTerm.VT100.translations: #override \n\
