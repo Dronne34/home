@@ -11,18 +11,41 @@ XTerm*foreground:        #222D31
 XTerm*pointerColor:      #FF5500
 XTerm*faceName:          Iosevka Nerd Font Mono
 XTerm*faceSize:          12
-
+XTerm*saveLines: 16384
+XTerm*scrollTtyOutput: false
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-background:                      #222D31
-foreground:                      #d8d8d8
-*fading:                          8
-*fadeColor:                       black
-cursorColor:                     #1ABB9B
-*pointerColorBackground:          #2B2C2B
-pointerColorForeground:          #F0D92F
+!background:                      #222D31
+!foreground:                      #d8d8d8
+!*fading:                          8
+!*fadeColor:                       black
+!cursorColor:                     #1ABB9B
+!*pointerColorBackground:          #2B2C2B
+!pointerColorForeground:          #F0D92F
 
+!! Font size
+XTerm.VT100.translations: #override \n\
+ Ctrl <Key> minus: smaller-vt-font() \n\
+ Ctrl <Key> plus: larger-vt-font()
+!! Mouse
+/* Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
+/* Lock Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
+/* Lock @Num_Lock Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
+/* @Num_Lock Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
+/* <button 4>:scroll-back(5,line,m)     \n\ */
+/* Ctrl <button 5>:scroll-forw(1,halfpage,m) \n\ */
+/* Lock Ctrl <button 5>:scroll-forw(1,halfpage,m) \n\ */
+/* Lock @Num_Lock Ctrl <button 5>:scroll-forw(1,halfpage,m) \n\ */
+/* @Num_Lock Ctrl <button 5>:scroll-forw(1,halfpage,m) \n\ */
+/*      <button 5>:scroll-forw(5,line,m)     \n\ */
+XTerm.VT100.faceSize1: 9
+XTerm.VT100.faceSize2: 10
+XTerm.VT100.faceSize3: 11
+XTerm.VT100.faceSize4: 12
+XTerm.VT100.faceSize5: 13
+XTerm.VT100.faceSize6: 14
+XTerm.VT100.faceSize7: 15
 !! black dark/light
 *color0:                          #00FF00
 *color8:                          #00FF00
