@@ -1,11 +1,12 @@
-" if empty(glob('~/.vim/autoload/plug.vim'))
-"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-" endif
-" set Colorizer-auto
+if empty(glob('~/.vim/autoload/plug.vim'))
+ silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" set Colorizer-hl-ft
+" autocmd VimEnter * stopinsert
+" autocmd VimLeave * startinsert
+
 set mouse=a
 
 filetype on
@@ -46,7 +47,7 @@ hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark 
 call plug#begin('~/.vim/plugged')
 
 "call plug#begin()
-Plug 'ap/vim-css-color'
+" Plug 'ap/vim-css-color'
 Plug 'gko/vim-coloresque'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
@@ -84,8 +85,11 @@ let g:fzf_action = { 'enter': 'tab split' }
 " augroup auto_colorize
 " autocmd!
 " autocmd FileType * :ColorHighlight
+nnoremap <C-c> :ColorHighlight<CR>
 " augroup END
-
+" let g:colorizer_skip_comments = 1
+" let g:colorizer_disable_bufleave = 1
+" let g:colorizer_debug = 1
 
 " Start NERDTree and leave the cursor in it.
 " autocmd VimEnter * NERDTree
@@ -162,8 +166,45 @@ let g:NERDToggleCheckAllLines = 1
       \ 'vaffle' : [ 'Vaffle', '%{b:vaffle.dir}' ],
       \ }
 
+" augroup cursor_behaviour
+"     autocmd!
+
+"     " reset cursor on start:
+"     autocmd VimEnter * silent !echo -ne "\e[2 q"
+"     " cursor blinking bar on insert mode
+"     let &t_SI = "\e[5 q"
+"     " cursor steady block on command mode
+"     let &t_EI = "\e[2 q"
+
+"     " highlight current line when in insert mode
+"     autocmd InsertEnter * set cursorline
+"     " turn off current line highlighting when leaving insert mode
+"     autocmd InsertLeave * set nocursorline
+
+" augroup END
 
 augroup CustomCursorLine
 au!    
 au VimEnter * :hi! CursorLine gui=underline cterm=underline
 augroup END
+
+
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=n-v-c:blinkon1
+set guicursor+=i:ver100-iCursor
+set guicursor+=i:blinkwait10
+
+
+if &term =~ '^xterm\|rxvt'
+  " solid underscore
+  let &t_SI .= "\<Esc>[6 q"
+  " solid block
+  let &t_EI .= "\<Esc>1 q"
+  " 1 or 0 -> blinking block
+  " 3 -> blinking underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+endif
