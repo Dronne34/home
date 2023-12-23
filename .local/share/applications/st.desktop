@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=st
+Comment=st is a simple terminal implementation for X
+Icon=org.xfce.terminal
+Terminal=false
+Exec=st
+Categories=System;TerminalEmulator;
+Path=/usr/local/bin
+StartupNotify=false
