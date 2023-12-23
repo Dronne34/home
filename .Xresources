@@ -6,8 +6,8 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #d8d8d8
-XTerm*foreground:        #222D31
+XTerm*background:        #ffffff
+XTerm*foreground:        #333B4A
 XTerm*pointerColor:      #FF5500
 ! Font
 XTerm*renderFont: true
@@ -28,16 +28,13 @@ XTerm*selectToClipboard: true
 !pointerColorForeground:          #F0D92F
 
 ! double-click to select whole URLs :D
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+/* XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48 */
 
 
 !! Font size
 XTerm.VT100.translations: #override \n\
  Ctrl <Key> minus: smaller-vt-font() \n\
  Ctrl <Key> plus: larger-vt-font()
-!! Copy Paste
-Shift Ctrl<Key>C: copy-selection(CLIPBOARD) \n\
-Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n\
 !! Mouse
 /* Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
 /* Lock Ctrl <button 4>:scroll-back(1,halfpage,m) \n\ */
@@ -56,37 +53,27 @@ XTerm.VT100.faceSize4: 12
 XTerm.VT100.faceSize5: 13
 XTerm.VT100.faceSize6: 14
 XTerm.VT100.faceSize7: 15
-!! black dark/light
-*color0:                          #00FF00
-*color8:                          #00FF00
 
-!! red dark/light
-*color1:                          #ab4642
-*color9:                          #ab4642
 
-!! green dark/light
-*color2:                          #FFFFFF
-*color10:                         #00FF00
-
-!! yellow dark/light
-*color3:                          #55AA00
-*color11:                         #f7ca88
-
-!! blue dark/light
-*color4:                          #7cafc2
-*color12:                         #7cafc2
-
-!! magenta dark/light
-*color5:                          #ba8baf
-*color13:                         #ba8baf
-
-!! cyan dark/light
-*color6:                          #FFAA00
-*color14:                         #2794AA
-
-!! white dark/light
-*color7:                          #d8d8d8
-*color15:                         #f8f8f8
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #282A36
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
 Xcursor.theme:xcursor-breeze
 !URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
