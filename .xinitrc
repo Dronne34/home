@@ -7,7 +7,8 @@
 # xauth generate $DISPLAY
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec conky -c ~/.config/conky/conky-blue.conf &
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+# exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec picom --config  ~/.config/picom/picom.conf  &
 exec nitrogen --restore &
 exec xrandr -s 1920x1080 &
