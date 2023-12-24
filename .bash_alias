@@ -125,6 +125,10 @@ alias trash='sudo rm -rf ~/.local/share/Trash/*'
 alias temp='sudo rm -rf /tmp/*'
 alias du="du -sh /var/cache/pacman/pkg/"
 
+alias rns="sudo pacman -Rns "
+alias rma="rm -rf * "
+alias rm ="rm -rf "
+
 #copy files  
 #alias cp='rsync -zvhP'
 alias mv='rsync -zvhP --remove-source-files'
