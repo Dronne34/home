@@ -5,7 +5,7 @@
 # exec slstatus &
 # exec play_with_mpv &
 # xauth generate $DISPLAY
-exec xautolock -time 2 -notify 20 -notifier "brightness" &
+# exec xautolock -time 2 -notify 20 -notifier "brightness" &
 exec xset dpms 0 0 120 &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec conky -c ~/.config/conky/conky-blue.conf &
