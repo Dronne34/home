@@ -1,0 +1,43 @@
+#!/bin/sh
+
+BLANK='#00000000'
+CLEAR='#ffffff22'
+DEFAULT='#00815D'
+TEXT='#DE6021'
+WRONG='#FFBE00'
+VERIFYING='#006E77'
+LOCK=$SCRIPTPATH/lock.png
+
+i3lock \
+--insidever-color=$CLEAR     \
+--ringver-color=$VERIFYING   \
+\
+--insidewrong-color=$CLEAR   \
+--ringwrong-color=$WRONG     \
+\
+--inside-color=$BLANK        \
+--ring-color=$DEFAULT        \
+--line-color=$BLANK          \
+--separator-color=$DEFAULT   \
+\
+--verif-color=$TEXT          \
+--wrong-color=$TEXT          \
+--time-color=$TEXT           \
+--date-color=$TEXT           \
+--layout-color=$TEXT         \
+--keyhl-color=$WRONG         \
+--bshl-color=$WRONG          \
+--radius=120                 \
+--ring-width=14              \
+--time-size=38               \
+--date-size=18               \
+--screen 1                   \
+--blur  8                   \
+--clock                      \
+--indicator                  \
+--time-str="%H:%M:%S"        \
+--date-str="%A, %m %Y"       \
+--keylayout 1                \
+--pass-volume-keys 1          \
+--pass-volume-keys 1          \
+--pass-power-keys    \
