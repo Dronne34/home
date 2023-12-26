@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get the current brightness value
+
+current_brightness=$(xrandr --verbose | grep -i brightness | cut -f2 -d ' ')
+sleep 1
+dunstify -t 3000 "System going to lock after some time..."
+sleep 1
+# Decrease brightness in 3 steps
+brightness_step1=$(echo "$current_brightness - 0.2" | bc)
+brightness_step2=$(echo "$current_brightness - 0.4" | bc)
+brightness_step3=$(echo "$current_brightness - 0.6" | bc)
+
+# Set the new brightness values
+xrandr --output eDP1 --brightness $brightness_step1
+sleep 1
+xrandr --output eDP1 --brightness $brightness_step2
+sleep 1
+xrandr --output eDP1 --brightness $brightness_step3
+sleep 10
+# lock
+xrandr --output eDP1 --brightness $current_brightness

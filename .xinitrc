@@ -6,7 +6,8 @@
 # exec play_with_mpv &
 # xauth generate $DISPLAY
 # exec xautolock -time 2 -notify 20 -notifier "brightness" &
-exec xset dpms 0 0 120 &
+# exec xset dpms 0 0 120 &
+exec xautolock -locker lock -time 1 -notify 10 -notifier screen_notify &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec conky -c ~/.config/conky/conky-blue.conf &
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
