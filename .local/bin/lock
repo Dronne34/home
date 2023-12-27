@@ -28,6 +28,7 @@ i3lock \
 --keyhl-color=$WRONG         \
 --bshl-color=$WRONG          \
 --radius=120                 \
+--nofork                     \
 --ring-width=14              \
 --time-size=38               \
 --date-size=18               \
