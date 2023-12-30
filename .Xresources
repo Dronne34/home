@@ -6,13 +6,13 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #ffffff
+XTerm*background:        #42E130
 XTerm*foreground:        #333B4A
 XTerm*pointerColor:      #FF5500
 ! Font
 XTerm*renderFont: true
-XTerm*faceName:          Iosevka Nerd Font Mono
-XTerm*faceSize:          12
+XTerm*faceName:           Mononoki Nerd Font
+XTerm*faceSize:          13
 XTerm*saveLines: 16384
 XTerm*scrollTtyOutput: false
 XTerm*reverseVideo:      on
@@ -56,7 +56,7 @@ XTerm.VT100.faceSize7: 15
 
 
 ! Dracula Xresources palette
-*.foreground: #F8F8F2
+*.foreground: #ffffff
 *.background: #282A36
 *.color0:     #282A36
 *.color8:     #4D4D4D
