@@ -6,6 +6,7 @@
 # exec xautolock -locker lock -time 1 &
 # exec conky -c ~/.config/conky/conky-blue.conf &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec ~/.local/bin/loop.sh &
 exec xset dpms 0 0 120 &
 xautolock -locker lock -time 1 -notify 37 -notifier dimmer &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
