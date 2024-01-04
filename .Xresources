@@ -6,7 +6,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #42E130
+XTerm*background:        #84EF1D
 XTerm*foreground:        #333B4A
 XTerm*pointerColor:      #FF5500
 ! Font
@@ -126,7 +126,7 @@ urxvt*color15: #E8E8D3
 
 !! Dmenu
 dmenu.font : FantasqueSansMono Nerd Font:size=13
-dmenu.background : #373D4A
+dmenu.background : #353D4A
 dmenu.foreground : #FFFFFF
 dmenu.selbackground : #005577
 dmenu.selforeground : #FFFFFF
