@@ -132,7 +132,7 @@ alias rm="rm -rf "
 #copy files  
 #alias cp='rsync -zvhP'
 alias mv='rsync -zvhP --remove-source-files'
-
+alias cpm="rsync -ah --progress "
 #qemu-system#
 alias sda='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sda,cache=none,if=virtio -boot d'
 alias sdc='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sdc,cache=none,if=virtio -boot d'
@@ -175,6 +175,9 @@ alias tm="~/.local/shell/theme -i"
 alias mkk="rm -rf config.h & make clean && make clean install"
 alias pak="sudo pacman -Sy archlinux-keyring"
 alias cm='chmod u+x '
+
+## Browsing packages
+alias pp="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | bat -l perl)'"
 # alias font="fc-list :fontformat=TrueType -f "%{family}\n" | sort -u | fzf"
 ## transmission
 alias tsd="transmission-daemon"         # Transmission run daemon
