@@ -7,8 +7,8 @@
 # exec conky -c ~/.config/conky/conky-blue.conf &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec ~/.local/bin/loop.sh &
-exec xset dpms 0 0 120 &
-exec xautolock -locker lock -time 1 &
+# exec xset dpms 0 0 120 &
+exec xautolock -locker "betterlockscreen -l" -time 1 &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 exec xfce4-power-manager --daemon &
