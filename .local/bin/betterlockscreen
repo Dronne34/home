@@ -185,6 +185,7 @@ lock() {
         --layout-size="$fontsm" \
         --verif-pos="ix+35:iy-34" \
         --verif-align 2 \
+        --nofork        \
         --verif-text="$veriftext" \
         --verif-color="$verifcolor" \
         --verif-font="$font" \
@@ -251,6 +252,7 @@ failsafe() {
         --layout-size="$fontsm" \
         --verif-pos="ix+45:iy-35" \
         --verif-align 2 \
+        --nofork        \
         --verif-text="$veriftext" \
         --verif-color="$verifcolor" \
         --verif-font="$font" \
