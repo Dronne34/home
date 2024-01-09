@@ -13,8 +13,7 @@ brightness_step3=0.7
 brightness_step4=0.6
 brightness_step5=0.5
 brightness_step6=0.4
-brightness_step7=0.3
-brightness_step8=0.2
+
 # Set the touchpad device name (you may need to adjust this based on your system)
 touchpad_device="DELL08BD:00 04F3:30CB Touchpad"
 
@@ -29,24 +28,21 @@ restore_brightness() {
 }
 
 # Trap touchpad events and restore brightness
-trap 'restore_brightness' INT
+trap 'restore_brightness' INT KILL EXIT
 
 # Reduce brightness to 50% in three steps
 set_brightness $brightness_step1
-sleep 0.3
+sleep 0.5
 set_brightness $brightness_step2
-sleep 0.3
+sleep 0.5
 set_brightness $brightness_step3
-sleep 0.3
+sleep 0.5
 set_brightness $brightness_step4
-sleep 0.3
+sleep 0.5
 set_brightness $brightness_step5
-sleep 0.3
+sleep 0.5
 set_brightness $brightness_step6
-sleep 0.3
-set_brightness $brightness_step7
-sleep 0.3
-set_brightness $brightness_step8
+
 
 # Monitor touchpad events
 xinput test "$touchpad_device" | while read EVENT
