@@ -54,5 +54,6 @@ do
     # If touchpad is touched, restore brightness
     if [[ "EVENT type 4 (ButtonPress)" ]]; then
         restore_brightness
+        exit 126
     fi
 done
