@@ -19,6 +19,9 @@ export EDITOR=vim
 export TERM=st
 # append to the history file, don't overwrite it
 shopt -s histappend
+shopt -s cdspell
+alias exit='pwd > ~/.lwd && exit;'
+test -f ~/.lwd && export OLDPWD='head -1 ~/.lwd'
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000:

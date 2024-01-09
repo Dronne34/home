@@ -72,6 +72,7 @@ alias mk='makepkg -sri'
 alias pksyua='trizen -Syu --noconfirm && echo -e "\e[38;5;76m  AUR Updates Done!"'
 alias tn='trizen '
 alias in='pacman -Si '
+alias yay='trizen '
 
 #ps
 alias ps="ps auxf"
@@ -131,7 +132,7 @@ alias rm="rm -rf "
 
 #copy files  
 #alias cp='rsync -zvhP'
-alias mv='rsync -zvhP --remove-source-files'
+# alias mv='rsync -zvhP --remove-source-files'
 alias cpm="rsync -ah --progress "
 #qemu-system#
 alias sda='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/sda,cache=none,if=virtio -boot d'
@@ -140,7 +141,7 @@ alias sdb='sudo qemu-system-x86_64 -enable-kvm -m 4G -vga std  -drive file=/dev/
 
 #SYSTEM#
 alias zz='lsblk -f'
-alias screen='scrcpy --max-size 1024'
+# alias screen='scrcpy --max-size 1024'
 alias re='sudo systemctl reboot -f'
 alias po='sudo systemctl poweroff'
 alias pwg="pwgen 12  -1 -n -s"
