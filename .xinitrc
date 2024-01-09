@@ -7,7 +7,7 @@
 # exec conky -c ~/.config/conky/conky-blue.conf &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec ~/.local/bin/loop.sh &
-# exec xset dpms 0 0 120 &
+exec xset dpms 0 0 120 &
 exec xautolock -locker "betterlockscreen -l dimblur" -time 1  -notify 30 -notifier dim-screen &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
@@ -17,7 +17,7 @@ exec nitrogen --restore &
 exec xrandr -s 1920x1080 &
 exec xrdb -merge ~/.Xresources  &
 exec chmod u+x ~/.local/bin/* &
-#exec eval "$(ssh-agent -s)"  &
+exec eval "$(ssh-agent -s)"  &
 exec sxhkd &    
 exec dunst &
 exec dwmblocks & 
