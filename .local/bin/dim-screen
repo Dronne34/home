@@ -7,12 +7,21 @@ current_brightness=$(xrandr --current --verbose | grep -i brightness | awk '{pri
 base_brightness=1.0
 
 # Set the reduced brightness values
-brightness_step1=0.9
-brightness_step2=0.8
-brightness_step3=0.7
-brightness_step4=0.6
-brightness_step5=0.5
-brightness_step6=0.4
+brightness_step1=0.95
+brightness_step2=0.90
+brightness_step3=0.85
+brightness_step4=0.80
+brightness_step5=0.75
+brightness_step6=0.70
+brightness_step7=0.65
+brightness_step8=0.60
+brightness_step9=0.55
+brightness_step10=0.50
+brightness_step11=0.45
+brightness_step12=0.40
+brightness_step13=0.35
+brightness_step14=0.30
+# brightness_step15=0.25
 
 # Set the touchpad device name (you may need to adjust this based on your system)
 touchpad_device="DELL08BD:00 04F3:30CB Touchpad"
@@ -32,17 +41,36 @@ trap 'restore_brightness' INT KILL EXIT
 
 # Reduce brightness to 50% in three steps
 set_brightness $brightness_step1
-sleep 0.5
+sleep 0.03
 set_brightness $brightness_step2
-sleep 0.5
+sleep 0.03
 set_brightness $brightness_step3
-sleep 0.5
+sleep 0.03
 set_brightness $brightness_step4
-sleep 0.5
+sleep 0.03
 set_brightness $brightness_step5
-sleep 0.5
+sleep 0.03
 set_brightness $brightness_step6
-
+sleep 0.03
+set_brightness $brightness_step7
+sleep 0.03
+set_brightness $brightness_step8
+sleep 0.03
+set_brightness $brightness_step9
+sleep 0.03
+set_brightness $brightness_step10
+sleep 0.03
+set_brightness $brightness_step11
+sleep 0.03
+set_brightness $brightness_step12
+sleep 0.03
+set_brightness $brightness_step13
+sleep 0.03
+set_brightness $brightness_step14
+# sleep 0.03
+# set_brightness $brightness_step15
+# sleep 0.03
+# set_brightness $brightness_step16
 
 # Monitor touchpad events
 xinput test "$touchpad_device" | while read EVENT
