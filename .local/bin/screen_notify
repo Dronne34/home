@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # Get the current brightness value
-
 current_brightness=$(xrandr --verbose | grep -i brightness | cut -f2 -d ' ')
 sleep 1
 dunstify -t 3000 "System going to lock after some time..."
