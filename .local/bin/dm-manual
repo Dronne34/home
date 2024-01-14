@@ -16,7 +16,7 @@ select=$(man -k -l '' \
 # terminal to open manual
 # terminal="urxvt"
 # terminal="xterm"
-terminal="st -f Hack:style=Regular:size=11"
+terminal="st -f Hack:style=Regular:size=13"
 
 
 

@@ -3,7 +3,7 @@
 # add more args here according to preference
 ARGS="--volume=60"
 # dmenu theming
-# . $HOME/.local/bin/dmenu-theming
+. $HOME/.local/bin/dmenu-theming
 notification(){
 # change the icon to whatever you want. Make sure your notification server 
 # supports it and already configured.
@@ -25,7 +25,7 @@ menu(){
 }
 
 main() {
-	choice=$(menu | dmenu  $prompt $lines $colors $font $xoffset $yoffset $width -p "Play"  | cut -d. -f1)
+	choice=$(menu | dmenu -i $prompt $lines $colors $font $xoffset $yoffset $width -p "Play"  | cut -d. -f1)
 
 	case $choice in
 		1)
@@ -67,7 +67,7 @@ main() {
 	esac
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    st -e mpv $ARGS --title="radio-mpv" $URL
+    st -z 12  -e mpv --cover-art-auto=fuzzy   $ARGS --title="radio-mpv" $URL
 }
 
 pkill -f radio-mpv || main
