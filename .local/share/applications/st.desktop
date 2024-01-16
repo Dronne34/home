@@ -2,7 +2,7 @@
 Type=Application
 Name=st
 Comment=st is a simple terminal implementation for X
-Icon=org.xfce.terminal
+Icon=xterm-color_48x48
 Terminal=false
 Exec=st
 Categories=System;TerminalEmulator;
