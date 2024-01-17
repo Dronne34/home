@@ -6,13 +6,14 @@
 # exec xautolock -locker lock -time 1 &
 # exec conky -c ~/.config/conky/conky-blue.conf &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-xrandr --output eDP1 --brightness 1.2 &
+# xrandr --output eDP1 --brightness 1.2 &
+# exec xset dpms 200 300 360 &
+# exec xfce4-power-manager --daemon &
+exec xset -dpms
 exec ~/.local/bin/loop.sh &
-exec xset dpms 200 300 360 &
 exec xautolock -locker "betterlockscreen -l blur" -time 5 -notifier "dim-screen" -corners "0--0" -cornersize "200" -notify "240" -killtime 10 -killer "systemctl suspend" &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-# exec xfce4-power-manager --daemon &
 exec picom --config  ~/.config/picom/picom.conf  &
 exec nitrogen --restore &
 exec xrandr -s 1920x1080 &
