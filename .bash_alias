@@ -177,6 +177,9 @@ alias tm="~/.local/shell/theme -i"
 alias mkk="rm -rf config.h & make clean && make clean install"
 alias pak="sudo pacman -Sy archlinux-keyring"
 alias cm='chmod u+x '
+
+# https://askubuntu.com/questions/984205/how-to-save-gnome-settings-in-a-file
+# dconf dump / > dconf-settings.ini
 alias dcf="dconf load / < dconf-settings.ini"
 
 ## Browsing packages
