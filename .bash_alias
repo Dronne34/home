@@ -177,6 +177,7 @@ alias tm="~/.local/shell/theme -i"
 alias mkk="rm -rf config.h & make clean && make clean install"
 alias pak="sudo pacman -Sy archlinux-keyring"
 alias cm='chmod u+x '
+alias dcf="dconf load / < dconf-settings.ini"
 
 ## Browsing packages
 alias pp="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | bat -l perl)'"
