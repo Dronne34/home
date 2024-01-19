@@ -6,7 +6,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #84EF1D
+XTerm*background:        #ffffff
 XTerm*foreground:        #333B4A
 XTerm*pointerColor:      #FF5500
 ! Font
@@ -66,7 +66,7 @@ XTerm.VT100.faceSize7: 15
 *.color10:    #5AF78E
 *.color3:     #F1FA8C
 *.color11:    #F4F99D
-*.color4:     #BD93F9
+*.color4:     #47A8B8
 *.color12:    #CAA9FA
 *.color5:     #FF79C6
 *.color13:    #FF92D0

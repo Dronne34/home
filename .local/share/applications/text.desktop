@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Text editor
+Exec=/usr/local/bin/st -e vim %u
+Icon=
+Comment=
+Path=
+Terminal=false
+StartupNotify=false
