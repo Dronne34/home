@@ -65,8 +65,8 @@ main() {
 	esac
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    # streamlink  $URL 480p -p ffplay
-   streamlink -l error -p mpv --title "{author} - {category} - {title}" $URL 480p
+    streamlink  $URL 480p -p ffplay
+   # streamlink -l error -p mpv --title "{author} - {category} - {title}" $URL 480p
 
 }
 
