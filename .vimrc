@@ -10,52 +10,36 @@ endif
 " autocmd VimEnter * stopinsert
 " autocmd VimLeave * startinsert
 " set tabstop=4
+syntax enable
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+let g:rehash256 = 1
+set clipboard=unnamedplus       " Copy/paste between vim and other programs.
+set number relativenumber       " Display line numbers
+set termguicolors
+set number
 set hidden                      " Needed to keep multiple buffers open
 set nobackup                    " No auto backups
 set noswapfile                  " No swap
-set t_Co=256                    " Set if term supports 256 colors.
-set number relativenumber       " Display line numbers
-set clipboard=unnamedplus       " Copy/paste between vim and other programs.
-set laststatus=2
-syntax enable
-let g:rehash256 = 1
 set splitright
-set mouse=nicr
-filetype on
-filetype indent on
+set t_Co=256                    " Set if term supports 256 colors.
+set mouse=a
 set tabstop=4
+set laststatus=2
 set incsearch
 set nowrap
 set showmode
 set cursorline
-syntax on
-set number
 set wildmenu
-set termguicolors
-filetype plugin on
+
 " Cursor
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred     guifg=white
 " hi Normal ctermfg=#0080FF ctermbg=#333B4A
 hi Cursor ctermbg=15 ctermfg=8
 hi CursorLine gui=underline cterm=underline
 hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark gray, 15 = white
-highlight LineNr           ctermfg=8    ctermbg=none    cterm=none
-" highlight CursorLineNr     ctermfg=7    ctermbg=8       cterm=none
-highlight VertSplit        ctermfg=0    ctermbg=8       cterm=none
-highlight Statement        ctermfg=2    ctermbg=none    cterm=none
-highlight Directory        ctermfg=4    ctermbg=none    cterm=none
-highlight StatusLine       ctermfg=7    ctermbg=8       cterm=none
-highlight StatusLineNC     ctermfg=7    ctermbg=8       cterm=none
-highlight NERDTreeClosable ctermfg=2
-highlight NERDTreeOpenable ctermfg=8
-highlight Comment          ctermfg=4    ctermbg=none    cterm=italic
-highlight Constant         ctermfg=12   ctermbg=none    cterm=none
-highlight Special          ctermfg=4    ctermbg=none    cterm=none
-highlight Identifier       ctermfg=6    ctermbg=none    cterm=none
-highlight PreProc          ctermfg=5    ctermbg=none    cterm=none
-highlight String           ctermfg=12   ctermbg=none    cterm=none
-highlight Number           ctermfg=1    ctermbg=none    cterm=none
-highlight Function         ctermfg=1    ctermbg=none    cterm=none
 
 call plug#begin('~/.vim/plugged')
 
@@ -86,6 +70,7 @@ call plug#end()
 " colorscheme dracula
 colorscheme palenight
 " colorscheme onedark
+" colorscheme desert
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
@@ -193,5 +178,5 @@ highlight iCursor guifg=white guibg=steelblue
 " reset the cursor on start (for older versions of vim, usually not required)
 augroup myCmds
 au!
-autocmd VimEnter * silent !echo -ne "\e[5 q"
+autocmd VimEnter * silent !echo -e "\e[5 q"
 augroup END
