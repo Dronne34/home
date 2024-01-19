@@ -3,46 +3,59 @@ if empty(glob('~/.vim/autoload/plug.vim'))
    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
+""""""""""""""""""""
+" General Settings
+""""""""""""""""""""
+" set scrolloff=30
 " autocmd VimEnter * stopinsert
 " autocmd VimLeave * startinsert
-
-set mouse=a
-
-filetype on
-
-filetype indent on
-
-set tabstop=4
-
-set incsearch
-
-set nowrap
-
-set showmode
-
-set cursorline
-
-syntax on
-
-set number
-
-" set scrolloff=30
-
 " set tabstop=4
-
+set hidden                      " Needed to keep multiple buffers open
+set nobackup                    " No auto backups
+set noswapfile                  " No swap
+set t_Co=256                    " Set if term supports 256 colors.
+set number relativenumber       " Display line numbers
+set clipboard=unnamedplus       " Copy/paste between vim and other programs.
+set laststatus=2
+syntax enable
+let g:rehash256 = 1
+set splitright
+set mouse=nicr
+filetype on
+filetype indent on
+set tabstop=4
+set incsearch
+set nowrap
+set showmode
+set cursorline
+syntax on
+set number
 set wildmenu
-
 set termguicolors
-
 filetype plugin on
-
+" Cursor
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred     guifg=white
 " hi Normal ctermfg=#0080FF ctermbg=#333B4A
 hi Cursor ctermbg=15 ctermfg=8
 hi CursorLine gui=underline cterm=underline
 hi CursorLine gui=underline cterm=underline  ctermbg=8 ctermfg=15 "8 =     dark gray, 15 = white
-
+highlight LineNr           ctermfg=8    ctermbg=none    cterm=none
+" highlight CursorLineNr     ctermfg=7    ctermbg=8       cterm=none
+highlight VertSplit        ctermfg=0    ctermbg=8       cterm=none
+highlight Statement        ctermfg=2    ctermbg=none    cterm=none
+highlight Directory        ctermfg=4    ctermbg=none    cterm=none
+highlight StatusLine       ctermfg=7    ctermbg=8       cterm=none
+highlight StatusLineNC     ctermfg=7    ctermbg=8       cterm=none
+highlight NERDTreeClosable ctermfg=2
+highlight NERDTreeOpenable ctermfg=8
+highlight Comment          ctermfg=4    ctermbg=none    cterm=italic
+highlight Constant         ctermfg=12   ctermbg=none    cterm=none
+highlight Special          ctermfg=4    ctermbg=none    cterm=none
+highlight Identifier       ctermfg=6    ctermbg=none    cterm=none
+highlight PreProc          ctermfg=5    ctermbg=none    cterm=none
+highlight String           ctermfg=12   ctermbg=none    cterm=none
+highlight Number           ctermfg=1    ctermbg=none    cterm=none
+highlight Function         ctermfg=1    ctermbg=none    cterm=none
 
 call plug#begin('~/.vim/plugged')
 
@@ -164,23 +177,6 @@ let g:NERDToggleCheckAllLines = 1
       \ 'vaffle' : [ 'Vaffle', '%{b:vaffle.dir}' ],
       \ }
 
-" augroup cursor_behaviour
-"     autocmd!
-
-"     " reset cursor on start:
-"     autocmd VimEnter * silent !echo -ne "\e[2 q"
-"     " cursor blinking bar on insert mode
-"     let &t_SI = "\e[5 q"
-"     " cursor steady block on command mode
-"     let &t_EI = "\e[2 q"
-
-"     " highlight current line when in insert mode
-"     autocmd InsertEnter * set cursorline
-"     " turn off current line highlighting when leaving insert mode
-"     autocmd InsertLeave * set nocursorline
-
-" augroup END
-
 augroup CustomCursorLine
 au!    
 au VimEnter * :hi! CursorLine gui=underline cterm=underline
@@ -189,20 +185,13 @@ augroup END
 
 highlight Cursor guifg=white guibg=black
 highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=n-v-c:blinkon1
-set guicursor+=i:ver100-iCursor
-set guicursor+=i:blinkwait10
+" set guicursor=n-v-c:block-Cursor
+" set guicursor+=n-v-c:blinkon1
+" set guicursor+=i:ver100-iCursor
+" set guicursor+=i:blinkwait10
 
-
-if &term =~ '^xterm\|rxvt'
-  " solid underscore
-  let &t_SI .= "\<Esc>[6 q"
-  " solid block
-  let &t_EI .= "\<Esc>1 q"
-  " 1 or 0 -> blinking block
-  " 3 -> blinking underscore
-  " Recent versions of xterm (282 or above) also support
-  " 5 -> blinking vertical bar
-  " 6 -> solid vertical bar
-endif
+" reset the cursor on start (for older versions of vim, usually not required)
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[5 q"
+augroup END
