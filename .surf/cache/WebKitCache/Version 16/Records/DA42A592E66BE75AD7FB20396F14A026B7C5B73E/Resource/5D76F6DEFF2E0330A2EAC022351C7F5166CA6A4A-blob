@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- Editors & translators, please, edit fonts.en.tmpl, not .html -->
+
+<html lang=en>
+ <head profile="http://www.w3.org/2006/03/hcard">
+  <title>CSS: fonts</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content="width=device-width" name=viewport>
+  <link href="../../CSS/w3c-2010/main"
+   media="screen, handheld, projection, tv" rel=stylesheet title=Main>
+  <link href="../../CSS/floatspan-n"
+   media="screen, handheld, projection, tv" rel="alternate stylesheet"
+   title=Cascade>
+  <link href="../../CSS/daily-color"
+   media="screen, handheld, projection, tv" rel="alternate stylesheet"
+   title=Cascade>
+  <link href="../../CSS/floatspan"
+   media="screen, handheld, projection, tv" rel="alternate stylesheet"
+   title="Cascade (older browsers)">
+  <link href="../../CSS/daily-color"
+   media="screen, handheld, projection, tv" rel="alternate stylesheet"
+   title="Cascade (older browsers)">
+  <link href="../../CSS/asymmetric"
+   media="screen, handheld, projection, tv" rel="alternate stylesheet"
+   title=Asymmetric>
+  <link href="../../CSS/draft" media="screen, projection, tv"
+   rel="alternate stylesheet" title="Draft 3">
+  <link href="../../CSS/draft-rg" media="screen, projection, tv"
+   rel="alternate stylesheet" title="Draft 2">
+  <link href="../../CSS/twocolumn-print" media=print rel=stylesheet>
+  <link href="../../../" rel=home title=W3C>
+  <link href="../../CSS/" rel=top title=CSS>
+  <link href="../../CSS/current-work" rel=chapter title=Roadmap>
+  <link href="../../Examples/007/" rel=chapter title=Examples>
+  <link href="../../../Consortium/activities" rel=bookmark
+   title=Activities>
+  <link href="../../../TR/" rel=bookmark title="Tech. reports">
+  <link href="../../../Consortium/Translation/" rel=bookmark
+   title=Translations>
+  <link href="../../../Status" rel=bookmark title=Software>
+  <link href="../../../Consortium/siteindex" rel=index
+   title="Site index">
+  <link href="../../CSS/opensearch.xml" rel=search title="Search W3C"
+   type="application/opensearchdescription+xml">
+  <link href="../../../Help/search" rel=search title="Search W3C"
+   type="text/html">
+  <link href="../../../Consortium/Legal/ipr-notice.html#Copyright"
+   rel=copyright title=Copyright>
+  <link href=fonts.en.html rel=canonical>
+  <style type="text/css">
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1.3em 0 }
+  td, th {
+    text-align: left;
+    padding: 0.2em;
+    vertical-align: top }
+  th[colspan] {
+    font-weight: normal;
+    font-style: italic;
+    padding-top: 2em;
+    background: hsla(0,0%,100%,0.4);
+    color: red }
+  td + td {
+   font-size: larger;
+   font-size-adjust: none;
+   line-height: 1.25 }
+  td img {
+    margin: 0.125em 0;
+    max-width: none }
+  </style>
+  <link href="http://www.carionltd.com/Style/Example007/fonts.html"
+   hreflang=az rel=alternate title="Azərbaycan">
+  <link href="http://dichev.com/Style/Examples/007/fonts/" hreflang=bg
+   rel=alternate title="Български">
+  <link
+   href="http://www.ich-lerne-css.de/Style/Examples/007/fonts.html"
+   hreflang=de rel=alternate title=Deutsch>
+  <link href="http://www.greekcom.org/Style/Examples/007/fonts.htm"
+   hreflang=el rel=alternate title="Ελληνικά">
+  <link href=fonts.en.html hreflang=en rel=alternate title=English>
+  <link
+   href="http://www.spanish-translator-services.com/espanol/t/007/fonts.html"
+   hreflang=es rel=alternate title="Español">
+  <link href=fonts.fr.html hreflang=fr rel=alternate title="Français">
+  <link href="http://www.innerviewme.com/007/fonts.html" hreflang=hr
+   rel=alternate title=Hrvatski>
+  <link href="http://www.erasparsa.com/w3/Style/Examples/007/fonts/"
+   hreflang=id rel=alternate title="Bahasa Indonesia">
+  <link
+   href="http://www.bjornenki.com/articles/w3_style_examples_007_fonts"
+   hreflang=nb rel=alternate title=Norsk>
+  <link href=fonts.nl.html hreflang=nl rel=alternate title=Nederlands>
+  <link href=fonts.pl.html hreflang=pl rel=alternate title=Polski>
+  <link href="fonts.pt_BR.html" hreflang=pt-br rel=alternate
+   title="Português brasileiro">
+  <link href="http://www.internetbootcamp.net/007/fonts.html"
+   hreflang=pt-pt rel=alternate title="Português">
+  <link href=fonts.ru.html hreflang=ru rel=alternate
+   title="Русский [2017-10-18]">
+  <link href="http://www.codingbasic.com/style/example/007/fonts.html"
+   hreflang=th rel=alternate title="ไทย">
+  <link href="http://tl.tz8.de/style-examples-007-fonts.html"
+   hreflang=tl rel=alternate title=Tagalog>
+  <link href=fonts.uk.html hreflang=uk rel=alternate
+   title="Українська [2017-10-18]">
+  <link href="http://www.300yards.com/007/fonts.html" hreflang=vi
+   rel=alternate title="Tiếng Việt">
+  <link href="fonts.zh_CN.html" hreflang=zh-cn rel=alternate
+   title="简体中文 [2016-11-29]">
+  <link href="fonts.zh_HK.html" hreflang=zh-hk rel=alternate
+   title="繁體中文 [2016-11-29]">
+  <link href=Overview.en rel=up title="CSS: tips &amp; tricks">
+  <link href=figures.en rel=first title="CSS: figures &amp; captions">
+  <link href=target.en rel=prev title="CSS: a tabbed interface">
+  <link href=center.en rel=next title="CSS: centering things">
+  <link href=slideshow.en rel=last
+   title="CSS: Using animation for automatic slideshows">
+
+ <body>
+  <div class=section id=language>
+   <p><a href="#translations">Languages</a>
+  </div>
+
+  <h1><em>Web Style Sheets</em> CSS tips &amp; tricks</h1>
+
+  <div class=section id=intro>
+   <p>See also the <a href="./">index</a> of all tips.
+
+   <p class=stb>On this page:
+
+   <ul>
+    <li id=p1><a href="#font-family" rel=chapter>Font families</a>
+
+    <li id=p2><a href="#font-style" rel=chapter>Font styles</a>
+   </ul>
+  </div>
+
+  <div class=section id=font-family>
+   <h2>Font families</h2>
+
+   <p>After the color, the font is probably the most basic property of
+    a page. On this page I won't show any "tricks," but I will show the
+    range of font variations that CSS allows.
+
+   <p>Since not all fonts are available on all computers (there are
+    thousands of fonts, and most are not free), CSS provides a system
+    of fallbacks. You list the font that you want first, then any fonts
+    that might fill in for the first if it is unavailable, and you
+    should end the list with a <em>generic font,</em> of which there
+    are five: <strong>serif, sans-serif, monospace, cursive</strong>
+    and <strong>fantasy.</strong>
+
+   <p>The following table shows examples of various fonts (your
+    browser may not know all of them) and you can see what your browser
+    does with each of the five generic ones:
+
+   <table>
+    <thead>
+     <tr>
+      <th>Font family
+
+      <th>Your browser
+
+      <th>Sample image
+
+    <tbody>
+     <tr>
+      <th colspan=3>'sans-serif': normal fonts <em>without</em>
+       serifs
+
+     <tr>
+      <td><code>Arial, sans-serif</code>
+
+      <td style="font-family: Arial, sans-serif">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Arial,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Helvetica, sans-serif</code>
+
+      <td style="font-family: Helvetica, sans-serif">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Helvetica,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Verdana, sans-serif</code>
+
+      <td style="font-family: Verdana, sans-serif">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Verdana,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Trebuchet MS, sans-serif</code>
+
+      <td style="font-family: Trebuchet MS, sans-serif">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Trebuchet_MS,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Gill Sans, sans-serif</code>
+
+      <td style="font-family: Gill Sans, sans-serif">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Gill_Sans,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Noto Sans, sans-serif</code>
+
+      <td style="font-family: Noto Sans, sans-serif">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Noto_Sans,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Avantgarde, TeX Gyre Adventor, URW Gothic L,
+       sans-serif</code>
+
+      <td
+       style="font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif"
+       >The Quick Brown Fox Jumps Over The Lazy Dog
+
+      <td><img
+       src="images/en/Avantgarde,_TeX_Gyre_Adventor,_URW_Gothic_L,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Optima, sans-serif</code>
+
+      <td style="font-family: Optima, sans-serif">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Optima,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Arial Narrow, sans-serif</code>
+
+      <td style="font-family: Arial Narrow, sans-serif">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Arial_Narrow,_sans-serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>sans-serif</code>
+
+      <td style="font-family: sans-serif">The Quick Brown Fox Jumps
+       Over The Lazy Dog
+
+      <td>
+
+    <tbody>
+     <tr>
+      <th colspan=3>'serif': normal fonts <em>with</em> serifs
+
+     <tr>
+      <td><code>Times, Times New Roman, serif</code>
+
+      <td style="font-family: Times, Times New Roman, serif">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Times,_Times_New_Roman,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Didot, serif</code>
+
+      <td style="font-family: Didot, serif">The Quick Brown Fox Jumps
+       Over The Lazy Dog
+
+      <td><img src="images/en/Didot,_serif.svg" style="height: 3.50em"
+       >
+
+     <tr>
+      <td><code>Georgia, serif</code>
+
+      <td style="font-family: Georgia, serif">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Georgia,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Palatino, URW Palladio L, serif</code>
+
+      <td style="font-family: Palatino, URW Palladio L, serif">The
+       Quick Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Palatino,_URW_Palladio_L,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Bookman, URW Bookman L, serif</code>
+
+      <td style="font-family: Bookman, URW Bookman L, serif">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Bookman,_URW_Bookman_L,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>New Century Schoolbook, TeX Gyre Schola, serif</code
+       >
+
+      <td
+       style="font-family: New Century Schoolbook, TeX Gyre Schola, serif"
+       >The Quick Brown Fox Jumps Over The Lazy Dog
+
+      <td><img
+       src="images/en/New_Century_Schoolbook,_TeX_Gyre_Schola,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>American Typewriter, serif</code>
+
+      <td style="font-family: American Typewriter, serif">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/American_Typewriter,_serif.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>serif</code>
+
+      <td style="font-family: serif">The Quick Brown Fox Jumps Over
+       The Lazy Dog
+
+      <td>
+
+    <tbody>
+     <tr>
+      <th colspan=3>'monospace': fixed-width fonts
+
+     <tr>
+      <td><code>Andale Mono, monospace</code>
+
+      <td style="font-family: Andale Mono, monospace">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Andale_Mono,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Courier New, monospace</code>
+
+      <td style="font-family: Courier New, monospace">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Courier_New,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Courier, monospace</code>
+
+      <td style="font-family: Courier, monospace">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Courier,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>FreeMono, monospace</code>
+
+      <td style="font-family: FreeMono, monospace">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/FreeMono,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>OCR A Std, monospace</code>
+
+      <td style="font-family: OCR A Std, monospace">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/OCR_A_Std,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>DejaVu Sans Mono, monospace</code>
+
+      <td style="font-family: DejaVu Sans Mono, monospace">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/DejaVu_Sans_Mono,_monospace.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>monospace</code>
+
+      <td style="font-family: monospace">The Quick Brown Fox Jumps
+       Over The Lazy Dog
+
+      <td>
+
+    <tbody>
+     <tr>
+      <th colspan=3>'cursive': fonts that emulate handwriting
+
+     <tr>
+      <td><code>Comic Sans MS, Comic Sans, cursive</code>
+
+      <td style="font-family: Comic Sans MS, Comic Sans, cursive">The
+       Quick Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Comic_Sans_MS,_Comic_Sans,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Apple Chancery, cursive</code>
+
+      <td style="font-family: Apple Chancery, cursive">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Apple_Chancery,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Bradley Hand, cursive</code>
+
+      <td style="font-family: Bradley Hand, cursive">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Bradley_Hand,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Brush Script MT, Brush Script Std, cursive</code>
+
+      <td
+       style="font-family: Brush Script MT, Brush Script Std, cursive"
+       >The Quick Brown Fox Jumps Over The Lazy Dog
+
+      <td><img
+       src="images/en/Brush_Script_MT,_Brush_Script_Std,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Snell Roundhand, cursive</code>
+
+      <td style="font-family: Snell Roundhand, cursive">The Quick
+       Brown Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Snell_Roundhand,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>URW Chancery L, cursive</code>
+
+      <td style="font-family: URW Chancery L, cursive">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/URW_Chancery_L,_cursive.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>cursive</code>
+
+      <td style="font-family: cursive">The Quick Brown Fox Jumps Over
+       The Lazy Dog
+
+      <td>
+
+    <tbody>
+     <tr>
+      <th colspan=3>'fantasy': decorative fonts, for titles, etc.
+
+     <tr>
+      <td><code>Impact, fantasy</code>
+
+      <td style="font-family: Impact, fantasy">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Impact,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Luminari, fantasy</code>
+
+      <td style="font-family: Luminari, fantasy">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Luminari,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Chalkduster, fantasy</code>
+
+      <td style="font-family: Chalkduster, fantasy">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Chalkduster,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Jazz LET, fantasy</code>
+
+      <td style="font-family: Jazz LET, fantasy">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Jazz_LET,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Blippo, fantasy</code>
+
+      <td style="font-family: Blippo, fantasy">The Quick Brown Fox
+       Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Blippo,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Stencil Std, fantasy</code>
+
+      <td style="font-family: Stencil Std, fantasy">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Stencil_Std,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Marker Felt, fantasy</code>
+
+      <td style="font-family: Marker Felt, fantasy">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Marker_Felt,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>Trattatello, fantasy</code>
+
+      <td style="font-family: Trattatello, fantasy">The Quick Brown
+       Fox Jumps Over The Lazy Dog
+
+      <td><img src="images/en/Trattatello,_fantasy.svg"
+       style="height: 3.50em">
+
+     <tr>
+      <td><code>fantasy</code>
+
+      <td style="font-family: fantasy">The Quick Brown Fox Jumps Over
+       The Lazy Dog
+
+      <td>
+   </table>
+  </div>
+
+  <div class=section id=font-style>
+   <h2>Font styles</h2>
+
+   <p>Most fonts have various styles within the same family, typically
+    a bold and an italic one, often also a bold italic style, somewhat
+    less often a small-caps and in a few cases extra-light/extra-bold
+    or stretched/condensed versions.
+
+   <p>The table below shows a number of different styles. Unless you
+    have a very rich collection of fonts, many of the rows will be the
+    same.
+
+   <table>
+    <thead>
+     <tr>
+      <th>rule
+
+      <th>serif
+
+      <th>sans-serif
+
+    <tbody>
+     <tr>
+      <th colspan=3>Styles
+
+     <tr>
+      <td><code>font-style: normal</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-style: normal"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-style: normal"
+       >The Quick…
+
+     <tr>
+      <td><code>font-style: italic</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-style: italic"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-style: italic"
+       >The Quick…
+
+     <tr>
+      <td><code>font-style: oblique</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-style: oblique"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-style: oblique"
+       >The Quick…
+
+    <tbody>
+     <tr>
+      <th colspan=3>Weights
+
+     <tr>
+      <td><code>font-weight: 100</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 100"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 100"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 200</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 200"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 200"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 300</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 300"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 300"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: normal</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: normal"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: normal"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 500</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 500"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 500"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 600</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 600"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 600"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: bold</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: bold"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: bold"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 800</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 800"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 800"
+       >The Quick…
+
+     <tr>
+      <td><code>font-weight: 900</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-weight: 900"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-weight: 900"
+       >The Quick…
+
+    <tbody>
+     <tr>
+      <th colspan=3>Variants
+
+     <tr>
+      <td><code>font-variant: normal</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-variant: normal"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-variant: normal"
+       >The Quick…
+
+     <tr>
+      <td><code>font-variant: small-caps</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-variant: small-caps"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-variant: small-caps"
+       >The Quick…
+
+    <tbody>
+     <tr>
+      <th colspan=3>Stretch
+
+     <tr>
+      <td><code>font-stretch: ultra-condensed</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: ultra-condensed"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: ultra-condensed"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: extra-condensed</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: extra-condensed"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: extra-condensed"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: condensed</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: condensed"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: condensed"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: semi-condensed</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: semi-condensed"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: semi-condensed"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: normal</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: normal"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: normal"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: semi-expanded</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: semi-expanded"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: semi-expanded"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: expanded</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: expanded"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: expanded"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: extra-expanded</code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: extra-expanded"
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: extra-expanded"
+       >The Quick…
+
+     <tr>
+      <td><code>font-stretch: ultra-expanded </code>
+
+      <td
+       style="font: larger Arno Pro, Tribun ADF Std, serif; font-stretch: ultra-expanded "
+       >The Quick…
+
+      <td
+       style="font: larger Lato, Roboto, sans-serif; font-stretch: ultra-expanded "
+       >The Quick…
+   </table>
+
+   <p>The CSS Fonts Module has more properties to specify special
+    styles (for fonts that provide several variants), in particular the
+    <a href="../../../TR/css-fonts-3/#font-variant-prop"
+    >font-variant</a> property has many more values.
+  </div>
+
+  <div class=section id=banner>
+   <h2>Site navigation</h2>
+
+   <form action="../../../Help/search">
+    <ul>
+     <li class=home><a href="/" rel=home><img alt=W3C
+      src="../../../Icons/w3c_home"></a>
+
+     <li><a href="../../CSS/">CSS home</a>
+
+     <li><a href="../../CSS/learning">Learn &amp; use</a>
+
+     <li><a href="../../CSS/software">Soft­ware</a>
+
+     <li><a href="../../CSS/current-work"
+      title="Participate in the development of the CSS standard"
+      >Par­tic­i­pate / <span title="All specifications and drafts"
+      >drafts</span></a>
+
+     <li class=search><input accesskey=E id=inputField maxlength=255
+      name=q size=10><button accesskey=G name=sa type=submit><img
+      alt=Search src="../../../2008/site/images/search-button"
+      title=Search></button>
+    </ul>
+   </form>
+  </div>
+
+  <div class=section id=endmatter>
+   <address class="vcard h-card"><img alt="" class="photo u-photo"
+    src="../../../People/Bos/bert3-small.jpg"> <a
+    class="fn url p-name u-url" href="../../../People/Bos/">Bert
+    Bos</a>, <span class="role p-role">style activity lead</span><br
+    >
+    <small><a href="/Consortium/Legal/ipr-notice#Copyright"
+    rel=copyright>Copyright</a> © <!--@@@-->1994–2021<!--/@@@--> <a
+    href="/"><abbr title="World Wide Web Consortium">W3C</abbr><sup
+    >®</sup></a></small> <a href="/Consortium/Legal/ipr-notice"
+    >Privacy policy</a></address>
+
+   <p>Created 17 Jan 2001;<br>
+    Last updated <!--@@@-->Wed 06 Jan 2021 05:40:49 AM UTC<!--/@@@-->
+  </div>
+
+  <div class=section id=translations>
+   <h2>Languages</h2>
+
+   <ul>
+    <li><a href="http://www.carionltd.com/Style/Example007/fonts.html"
+     hreflang=az rel=alternate>Azərbaycan</a>
+
+    <li><a href="http://dichev.com/Style/Examples/007/fonts/"
+     hreflang=bg rel=alternate>Български</a>
+
+    <li><a
+     href="http://www.ich-lerne-css.de/Style/Examples/007/fonts.html"
+     hreflang=de rel=alternate>Deutsch</a>
+
+    <li><a href="http://www.greekcom.org/Style/Examples/007/fonts.htm"
+     hreflang=el rel=alternate>Ελληνικά</a>
+
+    <li><a href=fonts.en.html hreflang=en rel=alternate>English</a>
+
+    <li><a
+     href="http://www.spanish-translator-services.com/espanol/t/007/fonts.html"
+     hreflang=es rel=alternate>Español</a>
+
+    <li><a href=fonts.fr.html hreflang=fr rel=alternate>Français</a>
+
+    <li><a href="http://www.innerviewme.com/007/fonts.html"
+     hreflang=hr rel=alternate>Hrvatski</a>
+
+    <li><a
+     href="http://www.erasparsa.com/w3/Style/Examples/007/fonts/"
+     hreflang=id rel=alternate>Bahasa Indonesia</a>
+
+    <li><a
+     href="http://www.bjornenki.com/articles/w3_style_examples_007_fonts"
+     hreflang=nb rel=alternate>Norsk</a>
+
+    <li><a href=fonts.nl.html hreflang=nl rel=alternate>Nederlands</a
+     >
+
+    <li><a href=fonts.pl.html hreflang=pl rel=alternate>Polski</a>
+
+    <li><a href="fonts.pt_BR.html" hreflang=pt-br rel=alternate
+     >Português brasileiro</a>
+
+    <li><a href="http://www.internetbootcamp.net/007/fonts.html"
+     hreflang=pt-pt rel=alternate>Português</a>
+
+    <li><a href=fonts.ru.html hreflang=ru rel=alternate
+     title=2017-10-18>Русский</a>
+
+    <li><a
+     href="http://www.codingbasic.com/style/example/007/fonts.html"
+     hreflang=th rel=alternate>ไทย</a>
+
+    <li><a href="http://tl.tz8.de/style-examples-007-fonts.html"
+     hreflang=tl rel=alternate>Tagalog</a>
+
+    <li><a href=fonts.uk.html hreflang=uk rel=alternate
+     title=2017-10-18>Українська</a>
+
+    <li><a href="http://www.300yards.com/007/fonts.html" hreflang=vi
+     rel=alternate>Tiếng Việt</a>
+
+    <li><a href="fonts.zh_CN.html" hreflang=zh-cn rel=alternate
+     title=2016-11-29>简体中文</a>
+
+    <li><a href="fonts.zh_HK.html" hreflang=zh-hk rel=alternate
+     title=2016-11-29>繁體中文</a>
+   </ul>
+
+   <p><a href="/Style/CSS/translating">About the translations</a>
+  </div>
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-indent-step:1
+End:
+-->
