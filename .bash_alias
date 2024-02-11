@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 {
-
+alias r='ranger'		
+alias n='nnn -a -e'
 alias ll='lsd  -la --color=auto'
 alias la='ls -a'
 alias ls='lsd -la --color=auto'					
