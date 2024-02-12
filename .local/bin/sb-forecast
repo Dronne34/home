@@ -37,7 +37,7 @@ showweather() {
 }
 
 case $BLOCK_BUTTON in
-	1) setsid -f "$TERM" -g "120x40" -n "x_st" -e less -Srf "$weatherreport" ;;
+	1) setsid -f "$TERM" -g "100x30" -n "x_st" -e less -Srf "$weatherreport" ;;
 	2) getforecast && showweather ;;
 	3) notify-send "🌈 Weather module" "\- Left click for full forecast.
 - Middle click to update forecast.

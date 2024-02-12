@@ -1,8 +1,9 @@
 #!/bin/bash
 file="$HOME/.surf/bookmarks"
-entry="$(cat $file | dmenu -i -l 10)";
+entry="$(cat $file | dmenu -i -l 15)";
 if [ "$entry" != "" ]; then
   url=$(echo $entry | awk '{print $1}')
   #echo $url
-  chromium --user-data-dir=/tmp/DIR --incognito $url &
+ qutebrowser $url  &
+ # chromium --user-data-dir=/tmp/DIR --incognito $url &
 fi
