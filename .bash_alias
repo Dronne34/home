@@ -25,7 +25,7 @@ alias ga='gh auth login'
 alias gc='gh repo clone'
 alias gr='gh repo delete'
 
-alias gtdw='git clone --depth=1 https://github.com/Dronne34/dwm-6.4.1'
+alias gtdw='git clone --depth=1 https://github.com/Dronne34/dwm-6.4'
 alias gtdm='git clone --depth=1 https://github.com/Dronne34/dmenu'
 
 alias gtc='git clone --depth=1 https://github.com/Dronne34/config'
