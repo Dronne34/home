@@ -8,7 +8,7 @@ alias n='nnn -a -e -Pt'
 alias ll='lsd  -la --color=auto'
 alias la='ls -a'
 # alias ls='lsd -la --color=auto'					
-alias ls="nnn -de"
+alias ls="nnn -ed -a -H -T v/d/e/r/s/t/a"
 alias l.="ls -A | grep '^\.'" 
 #github alias     
 alias addup="git add -u"
