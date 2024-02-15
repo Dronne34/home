@@ -115,7 +115,6 @@ ex ()
 # [ -e "$THEME_HISTFILE" ] && ~/.local/shell/theme "$(~/.local/shell/theme -l|tail -n1)"
 
 
-
 export SUDO_PROMPT="PROCEED WITH CAUTION...PASSWORD: "
 #unset SUDO_PROMPT
 
@@ -142,37 +141,15 @@ echo -e -n "\x1b[\x35 q" # changes to blinking bar
 # echo -e -n "\x1b[\x36 q" # changes to steady bar
 
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.bash_alias
-# source ~/.fonts/*.sh
-# ~/.local/bin/fetch
-# export collor1="\e[32m"
-# export collor2="\e[36m"
 pfetch
-# 
-# echo -e $collor1"I Use Arch Linux
-# very fast linux distro!"
-# 
-# echo -e $collor2"Hint! 🫑"
-# echo -e $collor2"pacman -S   'package_name'"
-# echo -e $collor2"pacman -Rns 'package_name'"
-# echo -e $collor2"sudo pacman -Syyu 'update'"
-
-# COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
-# # Cow-spoken fortunes every time you open a terminal
-# function cowsayfortune {
-#     NUMOFCOWS=`cowsay -l | tail -n +2 | wc -w`
-#     WHICHCOW=$((RANDOM%$NUMOFCOWS+1))
-#     THISCOW=`cowsay -l | tail -n +2 | sed -e 's/\ /\'$'\n/g' | sed $WHICHCOW'q;d'`
-
-#     #echo "Selected cow: ${THISCOW}, from ${WHICHCOW}"
-#     fortune | cowsay -f $THISCOW -W 100
-# }
-
-# fortune
-
-# powerline-daemon -q
-# POWERLINE_BASH_CONTINUATION=1
-# POWERLINE_BASH_SELECT=1
 . ~/.config/powerline/.powerline.sh
+source ~/.local/bin/tmux_completion.sh
+source ~/.local/share/icons-in-terminal/icons_bash.sh
+
+export NNN_PLUG="y:.cbcp;o:fzopen;m:nmount;x:!chmod +x $nnn;t:preview-tui"
+export NNN_BMS="D:$HOME/Downloads;H:$HOME/"
+export NNN_FIFO="/tmp/nnn.fifo"
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+
