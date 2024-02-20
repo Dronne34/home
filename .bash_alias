@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
 {
+# Tmux
+alias tmx='tmux new-session ranger \; split-window -h vim ~/.tmux.conf \; split-window -v vim ~/.bash_alias \; send-key C-l'
+alias tma='tmux a'
 alias tms='tmux list-sessions'	
-alias tmk='tmux kill-session'
+alias tmk='tmux kill-server'
+
 alias r='ranger'		
-alias n='nnn -a -e -Pt'
+# alias n='nnn -a -e -Pt'
+alias nnn="nnn -ed -a -H -T v/d/e/r/s/t/a -Pt"
 alias ll='lsd  -la --color=auto'
 alias la='ls -a'
 # alias ls='lsd -la --color=auto'					
@@ -201,5 +206,7 @@ alias vme="vim ~/Github/extra/extra_aur.sh"
 alias vmc="vim ~/Github/dwm-6.4/config.def.h"
 alias vmx="vim .xinitrc"
 alias vmb="vim .bashrc"
+alias vma="vim .bash_alias"
+alias vmt="vim .tmux.conf"
 
 }
