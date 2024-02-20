@@ -4,6 +4,8 @@ entry="$(cat $file | dmenu -i -l 15)";
 if [ "$entry" != "" ]; then
   url=$(echo $entry | awk '{print $1}')
   #echo $url
- qutebrowser $url  &
+# qutebrowser $url  &
+ chromium --user-data-dir=/tmp/DIR $url &
  # chromium --user-data-dir=/tmp/DIR --incognito $url &
+ # vivaldi --user-data-dir=/tmp/DIR --incognito $url &
 fi
