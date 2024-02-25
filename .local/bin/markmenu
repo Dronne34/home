@@ -1,5 +1,5 @@
 #!/bin/bash
-file="$HOME/.surf/bookmarks"
+file="$HOME/.config/bookmarks/bookmarks"
 cache="$HOME/.cache"
 entry="$(cat $file | dmenu -i -l 15)";
 if [ "$entry" != "" ]; then
