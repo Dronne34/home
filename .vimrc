@@ -33,6 +33,8 @@ set nowrap
 set showmode
 set cursorline
 set wildmenu
+set spelllang=en
+set spell
 
 " Cursor
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred     guifg=white
