@@ -2,9 +2,7 @@
 
 {
 # Tmux
-# alias tmx='tmux new-session ranger \; split-window -h vim ~/.tmux.conf \; split-window -v vim ~/.bash_alias \; send-key C-h'
-# alias tmx="tmux attach -t base || tmux new -s base vim ~/.tmux.conf \; split-window -h vim ~/.bash_alias \; split-window -v ranger \; new-window -n Dev \; send-keys C-l \; split-window -h \; new-window -n Media \; send-keys C-l \; select-pane -t @0"
-alias tmx='tmux attach -t base || tmux new -s base vim ~/.tmux.conf \; split-window -h vim ~/.bash_alias \; split-window -v ranger \; new-window -n Dev \; send-keys C-l \; split-window -h \; send-keys C-l \; new-window -n Media \; send-keys C-l \; select-window -t 0 \; select-pane -t 0 '
+alias tmx='tmux.sh'
 alias tma='tmux a'
 alias tms='tmux list-sessions'	
 alias tmk='tmux kill-server'
