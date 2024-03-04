@@ -14,9 +14,11 @@ TERMINAL=xterm
 EDITOR=vim
 TERM=st
 
-export TERMINAL=xterm
+export STERM=xterm
+export TERMINAL=xterm-256color
 export EDITOR=vim
-export TERM=st
+export TERM=st-256color
+export STERM=st
 # append to the history file, don't overwrite it
 shopt -s histappend
 shopt -s cdspell
