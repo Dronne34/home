@@ -5,7 +5,7 @@
 # Show 🔒 if a vpn connection is active
 
 case $BLOCK_BUTTON in
-	1) setsid -f $TERM links   -html-user-font-size 20  https://archlinux.org/; pkill -RTMIN+4 dwmblocks ;;
+	1) setsid -f $STERM links   -html-user-font-size 20  https://archlinux.org/; pkill -RTMIN+4 dwmblocks ;;
 	3) notify-send "🌐 Internet module" "\- Click to connect
 ❌: wifi disabled
 📡: no wifi connection
@@ -14,7 +14,7 @@ case $BLOCK_BUTTON in
 🌐: ethernet working
 🔒: vpn is active
 " ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+	6) "$STERM" -e "$EDITOR" "$0" ;;
 esac
 
 if grep -xq 'up' /sys/class/net/w*/operstate 2>/dev/null ; then

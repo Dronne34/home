@@ -13,7 +13,7 @@ case $BLOCK_BUTTON in
 - Scroll to change adjust light." ;;
 	4) light -A 10 ;;
 	5) light -U 10 ;;
-	6) "$TERMINAL" -e vim ~/.local/bin/sb-battery ;;
+	6) "$STERM" -e vim ~/.local/bin/sb-battery ;;
 esac
 
 # Loop through all attached batteries and format the info

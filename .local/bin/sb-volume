@@ -3,7 +3,7 @@
 # Prints the current volume or 🔇 if muted.
 
 case $BLOCK_BUTTON in
-	1) setsid -f "$TERM" -g "100x30" -n "x_st" -e pulsemixer ;;
+	1) setsid -f "$STERM" -g "100x30" -n "x_st" -e pulsemixer ;;
 	2) wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ;;
 	4) wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+ ;;
 	5) wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- ;;
