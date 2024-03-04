@@ -18,4 +18,4 @@ elif [ "$lgt" -lt 10 ]; then
 else
 	lgt="$lgt%"
 fi
-printf "💡: %s" "$lgt"
+printf "💡 %s" "$lgt"
