@@ -1,5 +1,5 @@
 lines="-l 10"
-font="-fn MononokiNerdFont-13"
+font="-fn MononokiNerdFont-15"
 colors="-nb #2C323E -nf #E2DCDC -sb #054059 -sf #FFFFFF"
 xoffset="-x 300"
 yoffset="-y 30"
