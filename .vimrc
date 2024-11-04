@@ -64,6 +64,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
