@@ -6,3 +6,17 @@ for id in $WIDS; do
 		  # sleep 1
 
   done
+
+WIDS=`xdotool search --onlyvisible --name "Open File"`
+for id in $WIDS; do
+		  xdotool windowsize $id 1083 807
+		  # sleep 1
+
+  done
+
+  WIDS=`xdotool search --onlyvisible --name "Save File"`
+for id in $WIDS; do
+		  xdotool windowsize $id 1083 807
+		  # sleep 1
+
+  done

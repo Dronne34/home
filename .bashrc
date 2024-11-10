@@ -18,7 +18,7 @@ export STERM=alacritty
 export TERMINAL=alacritty
 export EDITOR=vim
 export TERM=st-256color
-# export STERM=st
+export STERM=st
 # append to the history file, don't overwrite it
 shopt -s histappend
 shopt -s cdspell

@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /
 dotpath="$(find ~/Github/ -iname *.*)"
-choice=$(printf '%s\n' "${dotpath[@]}" | sort | dmenu -i -l 20 -p "Edit Config: ") || exit 1
+choice=$(printf '%s\n' "${dotpath[@]}" | sort | dmenu -l 20 -p "Edit Config: ") || exit 1
 if [ "$choice" ]; then
 	alacritty -e vim "$choice"
 else

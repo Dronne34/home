@@ -1,7 +1,7 @@
 #!/bin/bash
 file="$HOME/.config/bookmarks/bookmarks"
 cache="$HOME/.cache"
-entry="$(cat $file | dmenu -i -l 15)";
+entry="$(cat $file | dmenu -l 15)";
 if [ "$entry" != "" ]; then
   url=$(echo $entry | awk '{print $1}')
   #echo $url

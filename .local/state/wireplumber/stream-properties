@@ -1,0 +1,9 @@
+[stream-properties]
+Audio/Sink:node.name:auto_null={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "mute":false}
+Input/Audio:media.role:Music={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "mute":false}
+Output/Audio:application.name:Brave={"mute":false, "volume":1.000000, "channelVolumes":[1.000000], "channelMap":["MONO"]}
+Output/Audio:application.name:PipeWire\sALSA\s\obrave\c={"mute":false, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000}
+Output/Audio:application.name:PipeWire\sALSA\s\ochromium\c={"mute":false, "channelMap":[], "channelVolumes":[1.000000, 1.000000], "volume":1.000000}
+Output/Audio:application.name:ffplay={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "mute":false}
+Output/Audio:media.role:Music={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "mute":false}
+Output/Audio:media.role:Notification={"volume":1.000000, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "mute":false}
