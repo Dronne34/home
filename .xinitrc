@@ -44,12 +44,12 @@ fi
 # exec conky -c ~/.config/conky/conky-blue.conf &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # xrandr --output eDP1 --brightness 1.2 &
-# exec xset dpms 200 300 360 &
-# exec xfce4-power-manager --daemon &
 #xrandr --output eDP1 --brightness 1.2 &
-# exec xset -dpms &
+exec xfce4-power-manager --daemon &
+exec xset -dpms &
+exec xset dpms 200 300 360 &
 # exec ~/.local/bin/loop.sh &
-# exec xautolock -locker "betterlockscreen --lock blur" -time 5 -notifier "dim-screen" -corners "0--0" -cornersize "200" -notify "240" -killtime 10 -killer "systemctl suspend" &
+exec xautolock -locker "betterlockscreen --lock blur" -time 5 -notifier "dim-screen" -corners "0--0" -cornersize "200" -notify "240" -killtime 10 -killer "systemctl suspend" &
 # dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 exec picom --config  ~/.config/picom/picom.conf  &
