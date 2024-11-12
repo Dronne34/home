@@ -45,7 +45,7 @@ fi
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # xrandr --output eDP1 --brightness 1.2 &
 #xrandr --output eDP1 --brightness 1.2 &
-exec xfce4-power-manager --daemon &
+# exec xfce4-power-manager --daemon &
 exec xset -dpms &
 exec xset dpms 200 300 360 &
 # exec ~/.local/bin/loop.sh &

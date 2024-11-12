@@ -3,7 +3,7 @@ cd /
 dotpath="$(find ~/Github/ -iname *.*)"
 choice=$(printf '%s\n' "${dotpath[@]}" | sort | dmenu -l 20 -p "Edit Config: ") || exit 1
 if [ "$choice" ]; then
-	alacritty -e vim "$choice"
+	st -e vim "$choice"
 else
 	echo "program terminated"
 fi
