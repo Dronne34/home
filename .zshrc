@@ -19,12 +19,27 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="powerlevel10k"
 # ZSH_THEME="robbyrussell"
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+TRANSMISSION_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/transmission-daemon"
+HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
+PROMPT_COMMAND="history -a; history -n"
+HISTCONTROL=ignoreboth
+COLORTERM=truecolor
+TERMINAL=alacritty
+EDITOR=vim
+TERM=st
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+export STERM=alacritty
+export TERMINAL=alacritty
+export EDITOR=vim
+export TERM=st-256color
+export STERM=st
+# append to the history file, don't overwrite it
+# shopt -s histappend
+# shopt -s cdspell
+alias exit='pwd > ~/.lwd && exit;'
+test -f ~/.lwd && export OLDPWD='head -1 ~/.lwd'
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -35,7 +50,7 @@ CASE_SENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -107,7 +122,7 @@ export LANG=en_US.UTF-8
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='nvim'
+#   export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -122,7 +137,6 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 ttyctl -f
-pfetch
 # ~/.local/bin/fetch
 source ~/.bash_alias
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -191,9 +205,48 @@ ex ()
   else
     echo "'$1' is not a valid file"
   fi
+}
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
 
-}
+
+export SUDO_PROMPT="PROCEED WITH CAUTION...PASSWORD: "
+#unset SUDO_PROMPT
+
+case ${TERM} in
+
+  st*|xterm*|rxvt*|Eterm|alacritty*|aterm|kterm|gnome*)
+     PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+
+    ;;
+  screen*)
+    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+    ;;
+esac
+
+#shopt -s expand_aliases
+
+# Cursor
+# echo -e -n "\x1b[\x30 q" # changes to blinking block
+# echo -e -n "\x1b[\x31 q" # changes to blinking block also
+# echo -e -n "\x1b[\x32 q" # changes to steady block
+# echo -e -n "\x1b[\x33 q" # changes to blinking underline
+# echo -e -n "\x1b[\x34 q" # changes to steady underline
+echo -e -n "\x1b[\x35 q" # changes to blinking bar
+# echo -e -n "\x1b[\x36 q" # changes to steady bar
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+pfetch
+. ~/.config/powerline/.powerline.sh
+source ~/.local/bin/tmux_completion.sh
+source ~/.local/share/icons-in-terminal/icons_bash.sh
+
+export NNN_PLUG="y:.cbcp;o:fzopen;m:nmount;x:!chmod +x $nnn;t:preview-tui"
+export NNN_BMS="D:$HOME/Downloads;H:$HOME/"
+export NNN_FIFO="/tmp/nnn.fifo"
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+
