@@ -130,3 +130,4 @@ export NNN_BMS="D:$HOME/Downloads;H:$HOME/"
 export NNN_FIFO="/tmp/nnn.fifo"
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
 
+export GTK_THEME=Arc-Dark
