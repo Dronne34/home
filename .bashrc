@@ -129,5 +129,4 @@ export NNN_PLUG="y:.cbcp;o:fzopen;m:nmount;x:!chmod +x $nnn;t:preview-tui"
 export NNN_BMS="D:$HOME/Downloads;H:$HOME/"
 export NNN_FIFO="/tmp/nnn.fifo"
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
-
 export GTK_THEME=Arc-Dark
