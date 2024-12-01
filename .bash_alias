@@ -184,7 +184,7 @@ alias ml='sudo updatedb && echo -e "\Uf002\x1b[32;1m Database Update Done!"'
 alias pkaur="pacman -Qqem > pkaur.txt"
 alias pklist="comm -12 <(pacman -Qqe | sort) <(pacman -Sql core extra | sort) > pkglist.txt"
 alias tm="~/.local/shell/theme -i"
-alias mkk="rm -rf config.h & make clean && make clean install"
+alias mkk="rm -rf config.h & make clean && sudo make clean install"
 alias pak="sudo pacman -Sy archlinux-keyring"
 alias cm='chmod u+x '
 
