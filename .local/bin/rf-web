@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Define the path to the links file
+LINKS_FILE="$HOME/.config/bookmarks/bookmarks"
+cache="$HOME/.cache"
+style="$HOME/.config/rofi/themes/rounded-green-dark.rasi"
+# Check if the links file exists
+if [[ ! -f "$LINKS_FILE" ]]; then
+    echo "Links file not found!"
+    exit 1
+fi
+
+# Use Rofi to display the list of URLs from the file and capture the selected URL
+SELECTED_URL=$(cat "$LINKS_FILE" | rofi  -theme $style -dmenu -p "Select a website:")
+
+# Check if the user selected a URL
+if [[ -n "$SELECTED_URL" ]]; then
+    # Open the selected URL in Brave browser
+    brave --user-data-dir=$cache/DIR_WEB "$SELECTED_URL" &
+else
+    echo "No URL selected."
+fi
+
